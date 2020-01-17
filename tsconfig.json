@@ -1,0 +1,88 @@
+{
+  "compileOnSave": false,
+  "compilerOptions": {
+    "baseUrl": "./",
+    "outDir": "./dist/out-tsc",
+    "sourceMap": true,
+    "declaration": false,
+    "downlevelIteration": true,
+    "experimentalDecorators": true,
+    "module": "esnext",
+    "moduleResolution": "node",
+    "importHelpers": true,
+    "target": "es2015",
+    "typeRoots": [
+      "node_modules/@types"
+    ],
+    "lib": [
+      "es2018",
+      "dom"
+    ],
+    "paths": {
+      "button": [
+        "dist/button"
+      ],
+      "button/*": [
+        "dist/button/*"
+      ],
+      "text-input": [
+        "dist/text-input"
+      ],
+      "text-input/*": [
+        "dist/text-input/*"
+      ],
+      "textarea": [
+        "dist/textarea"
+      ],
+      "textarea/*": [
+        "dist/textarea/*"
+      ],
+      "select": [
+        "dist/select"
+      ],
+      "select/*": [
+        "dist/select/*"
+      ],
+      "datepicker": [
+        "dist/datepicker"
+      ],
+      "datepicker/*": [
+        "dist/datepicker/*"
+      ],
+      "checkbox": [
+        "dist/checkbox"
+      ],
+      "checkbox/*": [
+        "dist/checkbox/*"
+      ],
+      "radio-button": [
+        "dist/radio-button"
+      ],
+      "radio-button/*": [
+        "dist/radio-button/*"
+      ],
+      "label": [
+        "dist/label"
+      ],
+      "label/*": [
+        "dist/label/*"
+      ],
+      "form": [
+        "dist/form"
+      ],
+      "form/*": [
+        "dist/form/*"
+      ],
+      "test-input": [
+        "dist/test-input"
+      ],
+      "test-input/*": [
+        "dist/test-input/*"
+      ]
+    }
+  },
+  "angularCompilerOptions": {
+    "fullTemplateTypeCheck": true,
+    "strictInjectionParameters": true
+  }
+}

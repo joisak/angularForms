@@ -1,0 +1,43 @@
+<form ngNativeValidate  #form="ngForm" #validations="ngForm" (ngSubmit)="submit(form.value, validations)">
+    <div class="col-md-6">
+        <ui-text-input ngModel (eventValue)="valueEventHandler($event)" label="Name" name="Name">
+        </ui-text-input>
+
+      </div>
+      <div class="col-md-6">
+        <ui-text-input ngModel  type="number" required="true"
+          errorMessage="Detta fältet är obligatoriskt" label="Phone Number" name="konny">
+        </ui-text-input>
+      </div>
+      <div class="col-md-6">
+        <ui-text-input ngModel type="number" required="true"
+          errorMessage="Detta fältet är obligatoriskt" label="Cool Number" name="Cool number">
+        </ui-text-input>
+        <ui-testInput [(ngModel)]="external" required name="externalVal" #validations="ngModel" ></ui-testInput>
+        <ui-testInput [(ngModel)]="hej" required name="kotte" #validations="ngModel" ></ui-testInput>
+        <ui-testInput [(ngModel)]="gote" required name="photo" #validations="ngModel" ></ui-testInput>
+        <ui-testInput [(ngModel)]="carro" required name="k" #validations="ngModel" ></ui-testInput>
+
+        <button type="submit">Submit</button>
+      </div>
+
+
+
+      external: {{external}}
+      <p *ngIf="!form.control.valid">Counter is invalid!</p>
+      <pre>{{ form.value | json }}</pre>
+     
+</form>
+
+<form ngNativeValidate >
+  <label for="choose">Would you prefer a banana or a cherry?</label>
+  <input id="choose" name="i_like" required>
+  <button>Submit</button>
+</form>
+
+
+
+
+
+
+

@@ -1,0 +1,2 @@
+<label class="label" [for]="id">{{ label }}<span class="required" *ngIf="required">*</span></label>
+<input [(ngModel)]="value" (change)="changeValue(name, $event)" [required]="required" [name]="name" type="date" [id]="id" [disabled]="disabled">
