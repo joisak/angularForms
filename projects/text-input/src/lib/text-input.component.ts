@@ -1,11 +1,18 @@
 import { Component, OnInit, Input, Output, EventEmitter, AfterContentInit, forwardRef  } from '@angular/core';
-import { ControlValueAccessor, NG_VALUE_ACCESSOR } from '@angular/forms';
+import { CheckboxControlValueAccessor, NG_VALUE_ACCESSOR } from '@angular/forms';
 
 
 @Component({
   selector: 'ui-text-input',
   templateUrl: 'textInputComponent.html',
-  styleUrls: ['textInputComponent.scss']
+  styleUrls: ['textInputComponent.scss'],
+  providers: [
+    {
+      provide: NG_VALUE_ACCESSOR,
+      useExisting: forwardRef(() => TextInputComponent),
+      multi: true
+    }
+  ]
 })
 
 export class TextInputComponent implements AfterContentInit {
@@ -14,7 +21,41 @@ export class TextInputComponent implements AfterContentInit {
 
   constructor() { }
 
-  value:string = ''; 
+
+
+  onChange: any = () => {}
+  onTouch: any = () => {}
+  val= "" // this is the updated value that the class accesses
+  set value(val){  // this value is updated by programmatic changes if( val !== undefined && this.val !== val){
+  this.val = val
+  this.onChange(val)
+  this.onTouch(val)
+  }
+  
+  // this method sets the value programmatically
+  writeValue(value: any){ 
+  this.value = value
+  }
+  // upon UI element value changes, this method gets triggered
+  registerOnChange(fn: any){
+  this.onChange = fn
+  }
+  // upon touching the element, this method gets triggered
+  registerOnTouched(fn: any){
+  this.onTouch = fn
+  }
+  
+
+
+
+
+
+
+
+
+
+
+  _value:string = ''; 
   obj = {};
   error;
   testValue;
@@ -27,7 +68,7 @@ export class TextInputComponent implements AfterContentInit {
 
   @Output() eventValue = new EventEmitter();
 
-  changeValue(name, event?) {
+ /*  changeValue(name, event?) {
     if(event.target.required){
       this.obj[name]= [this.value, 'required'];
     } else {
@@ -35,7 +76,7 @@ export class TextInputComponent implements AfterContentInit {
     }
    
     this.eventValue.emit(this.obj);
-  }
+  } */
 
   focusOutFunction(value) {
     console.log(value);

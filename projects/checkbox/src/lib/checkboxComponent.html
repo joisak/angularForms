@@ -1,8 +1,6 @@
-<label class="label">{{ label }} <span class="required" *ngIf="required">*</span></label>
-<div class="root" *ngIf="items">
-    <div *ngFor="let item of items">
-        <input   (change)="changeValue(name, item.label,  $event)" [id]="item.id" [checked]="value" [disabled]="disabled" type="checkbox" [required]="required"> 
-        <label [for]="item.id">{{ item.label }}</label>
-    </div>
+<label class="label" *ngIf="label">{{ label }} <span class="required" *ngIf="required">*</span></label>
+<div class="root">
+        <input  [(ngModel)]="value" [attr.id]="id" [value]="id" [name]="id"  [disabled]="disabled" type="checkbox" [required]="required"> 
+        <label [attr.for]="id">{{ checkboxLabel }}</label>
 </div>
 

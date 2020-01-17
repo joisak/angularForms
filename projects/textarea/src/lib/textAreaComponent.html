@@ -1,4 +1,5 @@
 <div class="root">
     <label class="label" *ngIf="label" for="textarea">{{ label }} <span class="required">*</span></label>
-    <textarea [(ngModel)]="value" [name]="name"  (change)="changeValue(name, $event)" [placeholder]="placeholder" [disabled]="disabled" [required]="required"  id="textarea" [rows]="rows"></textarea>
+    <textarea [(ngModel)]="value" [name]="name"  [placeholder]="placeholder" [disabled]="disabled" [required]="required"  id="textarea" [rows]="rows" on-focusout="focusOutFunction($event.target.value)" ></textarea>
+    <span *ngIf="errorMessage && error" class="error-message">{{errorMessage}}</span>
 </div>

@@ -1,4 +1,4 @@
-<form ngNativeValidate  #form="ngForm" #validations="ngForm" (ngSubmit)="submit(form.value, validations)">
+<!-- <form ngNativeValidate  #form="ngForm" #validations="ngForm" (ngSubmit)="submit(form.value, validations)">
     <div class="col-md-6">
         <ui-text-input ngModel (eventValue)="valueEventHandler($event)" label="Name" name="Name">
         </ui-text-input>
@@ -36,8 +36,101 @@
 </form>
 
 
+ -->
+<form ngNativeValidate #form="ngForm" #validations="ngForm" (ngSubmit)="submit(form.value, validations)">
+  <div class="container">
+    <div class="row">
+  <!-- <div class="col-md-6">
+        <ui-text-input [(ngModel)]="name" label="Name" name="Name">
+        </ui-text-input>
+
+      </div>
+      <div class="col-md-6">
+        <ui-text-input [(ngModel)]="phone" type="number" required="true" errorMessage="Detta fältet är obligatoriskt"
+          label="Phone Number" name="Phone">
+        </ui-text-input>
+      </div> --> <!--
+      <div class="col-md-6">
+        <ui-text-input [(ngModel)]="coolNumber" type="number" required="true"
+          errorMessage="Detta fältet är obligatoriskt" label="Cool Number" name="Cool number">
+        </ui-text-input>
+      </div>
+      <div class="col-md-6">
+        <ui-select [(ngModel)]="favoriteBand" (eventValue)="valueEventHandler($event)" name="Your Favorite Band"
+          [items]="['Bowling With Friends', 'Kinky CoCoons', 'Kulturtanterna', 'RAZZIA EL ORDINADOR']" for="bands"
+          label="Choose your favorite band"></ui-select>
+      </div>
+
+      <div class="col-md-6">
+        <ui-select [(ngModel)]="favorite" required="true" (eventValue)="valueEventHandler($event)"
+          name="Your Favorite Band 2"
+          [items]="['Bowling With Friends', 'Kinky CoCoons', 'Kulturtanterna', 'RAZZIA EL ORDINADOR']" for="bands"
+          label="Choose your favorite band"></ui-select>
+      </div>
+      <div class="col-md-6">
+        <ui-textarea  [(ngModel)]="words" name="words from you"  errorMessage="Detta fältet är obligatoriskt"
+          label="Please, tell us about yourself">
+        </ui-textarea>
+      </div>
+      <div class="col-md-6">
+  
+        <ui-textarea  [(ngModel)]="you"  name="Skriv om dig själv"
+          label="Please, write some words about yourself">
+        </ui-textarea>
+      </div> -->
+<!--       <div class="col-md-6">
+        <ui-radio-button [(ngModel)]="yesssssssss" [required]="true"   name="Yes or No?" label="Yes or No?" [items]="[
+        {
+          name: '1',
+        value: 'Yes',
+        id: '1',
+        label: 'Ja'},  {
+          name: '1',
+          value: 'No',
+          id: '2',
+          label: 'Nej'
+      }]"></ui-radio-button>
+      </div>
+      <div class="col-md-6">
+        <ui-radio-button  [(ngModel)]="yessss"  [required]="true"  name="Yes or Nooose?" label="Yes or Noooose?" [items]="[
+        {
+          name: '2',
+        value: 'Yes',
+        id: '4',
+        label: 'Ja'},  {
+          name: '2',
+          value: 'No',
+          id: '3',
+          label: 'Nej'
+      }]"></ui-radio-button>
+      </div> -->
+
+ <!--      <div class="col-md-6">  <ui-datepicker [(ngModel)]="time1"  required="true"  name="date" label="Pick any date"></ui-datepicker>
+      </div>
+      <div class="col-md-6">  <ui-datepicker [(ngModel)]="time2"   name="datetime" label="Pick any date"></ui-datepicker>
+      </div>
+ -->
+    </div>
+
+    <div class="col-md-6">
+      <ui-checkbox [(ngModel)]="choisen" id="7" name="vill du ha en katt?" label="Want to go home and cry?" checkboxLabel="Katt?"></ui-checkbox>
+      <ui-checkbox  [(ngModel)]="kossan" id="hund" name="hehe" checkboxLabel="räv?"></ui-checkbox>
+    </div>
+    <div class="col-md-6">
+
+      <input type="checkbox" id="43">
+      <label for="43">heeej</label>
+    
+      
+   
+    
+    </div>
 
 
+    <div class="action-row">
+      <button type="submit">Klick</button>
+    </div>
+    
+  </div>
 
-
-
+</form>

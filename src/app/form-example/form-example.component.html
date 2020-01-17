@@ -5,17 +5,17 @@
   <div class="container">
     <div class="row">
       <div class="col-md-6">
-        <ui-text-input (eventValue)="valueEventHandler($event)" label="Name" name="Name">
+        <ui-text-input label="Name" name="Name">
         </ui-text-input>
 
       </div>
       <div class="col-md-6">
-        <ui-text-input (eventValue)="valueEventHandler($event)" type="number" required="true"
+        <ui-text-input  type="number" required="true"
           errorMessage="Detta fältet är obligatoriskt" label="Phone Number" name="Phone">
         </ui-text-input>
       </div>
       <div class="col-md-6">
-        <ui-text-input (eventValue)="valueEventHandler($event)" type="number" required="true"
+        <ui-text-input  type="number" required="true"
           errorMessage="Detta fältet är obligatoriskt" label="Cool Number" name="Cool number">
         </ui-text-input>
       </div>
@@ -75,31 +75,11 @@
 
 <div class="row">
   <div class="col-md-6">
-    <ui-checkbox (eventValue)="valueEventHandler($event)" name="cRY?" label="Want to go home and cry?" [items]="[{
-      name: '10',
-      value: '11',
-      id: '7',
-      label: 'Yeah, right now please'
-    }, {
-      name: '10',
-      value: '77',
-      id: '42',
-      label: 'No, I want to work at least 13 hours and then go home and cry'
-    }]"></ui-checkbox>
+
   </div>
   <div class="col-md-6">
     
-  <ui-checkbox required="true" (eventValue)="valueEventHandler($event)" name="radio-button required" label="Want to go home and cry?" [items]="[{
-    name: '10',
-    value: '11',
-    id: '50',
-    label: 'Yeah, right now häst'
-  }, {
-    name: '10',
-    value: '77',
-    id: '48',
-    label: 'No, I want to work at least 13 hours and then go home and sleep'
-  }]"></ui-checkbox>
+ 
   
   </div>
   <div class="col-md-6">
