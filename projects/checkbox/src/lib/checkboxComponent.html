@@ -1,6 +1,15 @@
-<label class="label" *ngIf="label">{{ label }} <span class="required" *ngIf="required">*</span></label>
+<label class="label" *ngIf="label"
+  >{{ label }} <span class="required" *ngIf="required">*</span></label
+>
 <div class="root">
-        <input  [(ngModel)]="value" [attr.id]="id" [value]="id" [name]="id"  [disabled]="disabled" type="checkbox" [required]="required"> 
-        <label [attr.for]="id">{{ checkboxLabel }}</label>
+  <input
+    [(ngModel)]="value"
+    [attr.id]="name"
+    [value]="name"
+    [name]="name"
+    [disabled]="disabled"
+    type="checkbox"
+    [required]="required"
+  />
+  <label [attr.for]="name">{{ checkboxLabel }}</label>
 </div>
-

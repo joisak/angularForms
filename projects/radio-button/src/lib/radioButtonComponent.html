@@ -1,5 +1,16 @@
-<label class="label"> {{ label }}<span class="required" *ngIf="required">*</span> </label>
+<label class="label">
+  {{ label }}<span class="required" *ngIf="required">*</span>
+</label>
 <div class="root" *ngFor="let item of items">
-    <input [(ngModel)]="value"  [required]="required" [disabled]="disabled" type="radio" [id]="item.id" [attr.name]="item.name" [name]="item.name"  [value]="item.value">
-    <label [for]="item.id">{{ item.label }}</label>
+  <input
+    [(ngModel)]="value"
+    [required]="required"
+    [disabled]="disabled"
+    type="radio"
+    [id]="item.label"
+    [attr.name]="item.name"
+    [name]="item.name"
+    [value]="item.label"
+  />
+  <label [for]="item.label">{{ item.label }}</label>
 </div>
