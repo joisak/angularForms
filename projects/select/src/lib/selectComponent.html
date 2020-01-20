@@ -1,14 +1,5 @@
-<!-- <div class="root">
-    <label class="label" [for]="for">{{ label }}<span class="required" *ngIf="required">*</span></label>
-    <select [(ngModel)]="value" [name]="name" (change)="changeValue(name, $event)" [required]="required" [id]="for" [disabled]="disabled" *ngIf="items">
-        <option *ngIf="placeholder" value="">{{ placeholder }}</option>
-        <option *ngFor="let item of items">{{ item }}</option>
-    </select>
-</div> -->
-
-    
  <div class="root">
-    <label class="label" [for]="for">{{ label }}<span class="required" *ngIf="required">*</span></label>
+    <label class="block-label" [for]="for">{{ label }}<span class="required" *ngIf="required">*</span></label>
     <select [(ngModel)]="value" [name]="name" [attr.name]="name" [required]="required" [id]="for" [disabled]="disabled" *ngIf="items">
         <option *ngIf="placeholder" value="">{{ placeholder }}</option>
         <option *ngFor="let item of items">{{ item }}</option>

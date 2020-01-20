@@ -1,6 +1,314 @@
 /* You can add global styles to this file, and also import other style files */
 @import '../node_modules/bootstrap/scss/bootstrap-grid.scss';
+@import '../node_modules/bootstrap/scss/bootstrap.scss';
 
 .action-row {
     text-align: right;
 }
+
+
+//From SchreqForms
+
+body {
+    /*TODO(joisak) why padding? */
+    /*padding-top: 50px;*/
+    /*padding-bottom: 20px;*/
+}
+
+a {
+    color: #0a1e6ed9;
+}
+
+.main-content {
+    min-height: calc(100vh - 296px);
+}
+
+
+footer {
+    margin-top: 48px;
+    border-top: 1px solid #efefef;
+}
+
+/* Set padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Override the default bootstrap behavior where horizontal description lists 
+   will truncate terms that are too long to fit in the left column 
+*/
+.dl-horizontal dt {
+    white-space: normal;
+}
+
+ /*Set width on the form input elements since they're 100% wide by default*/
+
+ .p-width {
+     max-width: 600px;
+ }
+
+.paragraph-wrapper {
+    max-width: 700px;
+    font-size: 1.2em;
+    margin-bottom: 32px;
+    letter-spacing: 0.02em;
+}
+
+.custom-two-columns {
+    width: 50%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.custom-two-columns .custom-input {
+    width: calc(50% - 8px);
+    padding-bottom: 8px;
+}
+
+.custom-input {
+    display: flex;
+    flex-direction: column;
+}
+
+.custom-required {
+    color: red;
+}
+
+.custom-info-icon {
+    color: blue;
+}
+
+header {
+    border-bottom: 1px solid #e7e7e7;
+}
+
+
+.first-header {
+    padding: 16px 0 32px 0;
+}
+
+
+/*Form*/
+
+label {
+    font-weight: 500;
+}
+
+.action-row {
+    border-top: 2px solid #efefef;
+    display: flex;
+    justify-content: flex-end;
+}
+
+input,
+select,
+textarea {
+    font-size: 16px;
+    border-radius: 4px;
+    padding: 4px;
+}
+
+.form-section {
+    background: #eaeef1;
+    border: 1px solid #0a1e6e59;
+    padding: 15px;
+    border-radius: 4px;
+    box-shadow: 0px 1px 5px #0a1e6e2e;
+    margin-bottom: 16px;
+}
+
+.form-section h4 {
+    font-weight: 400;
+    margin-bottom: 16px;
+}
+
+.form-group {
+    min-height: 70px;
+}
+
+.block-label {
+    display: block;
+}
+
+.no-gutters  .gutter-fix:first-of-type {
+    padding-right: 8px;
+}
+
+
+.no-gutters  .gutter-fix:last-of-type {
+    padding-left: 8px;
+}
+
+.no-gutters .one-gutter-fix {
+    padding-left: 8px;
+    padding-right: 0;
+}
+.no-gutters .one-gutter-fix-left {
+    padding-left: 0;
+    padding-right: 8px;
+}
+
+.custom-button {
+    margin-top: 16px;
+    background-color: rgba(10, 30, 110, 0.85);
+    color: white;
+    padding:12px 20px;
+    font-size: 16px;
+    line-height: 24px;
+}
+
+    .custom-button:hover {
+        color: white;
+        background-color: rgba(10, 30, 110, 1);
+        cursor: pointer;
+    }
+
+    .custom-button:disabled {
+        color: white;
+        background-color: rgba(10, 30, 110, 1);
+        cursor: default;
+    }
+
+
+
+
+/*Radio Button*/
+/* The container */
+.radio-container {
+    display: inline-block;
+    position: relative;
+    padding-left: 27px;
+    padding-right:8px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 16px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    font-weight: 400;
+}
+
+    /* Hide the browser's default radio button */
+    .radio-container input {
+        position: absolute;
+        opacity: 0;
+        cursor: pointer;
+    }
+
+/* Create a custom radio button */
+.checkmark {
+    position: absolute;
+    top: 2px;
+    left: 0;
+    height: 20px;
+    width: 20px;
+    background-color: white;
+    border-radius: 50%;
+    border: 2px solid #0a1e6ed9;
+}
+
+/* On mouse-over, add a grey background color */
+.container:hover input ~ .checkmark {
+    background-color: white;
+}
+
+/* When the radio button is checked, add a blue background */
+.radio-container input:checked ~ .checkmark {
+    background-color: #0a1e6ed9;
+}
+
+/* Create the indicator (the dot/circle - hidden when not checked) */
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+/* Show the indicator (dot/circle) when checked */
+.radio-container input:checked ~ .checkmark:after {
+    display: block;
+}
+
+/* Style the indicator (dot/circle) */
+.radio-container .checkmark:after {
+    top: 4px;
+    left: 4px;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: white;
+}
+
+/*  Checkbox
+*//* Customize the label (the container) */
+.checkbox-container {
+    display: inline-block;
+    position: relative;
+    padding-left: 27px;
+    padding-right: 8px;
+    margin-bottom: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight:400;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+    /* Hide the browser's default checkbox */
+    .checkbox-container input {
+        position: absolute;
+        opacity: 0;
+        cursor: pointer;
+        height: 0;
+        width: 0;
+    }
+
+/* Create a custom checkbox */
+    .checkbox-container .checkbox-checkmark {
+        position: absolute;
+        top: 2px;
+        left: 0;
+        height: 20px;
+        width: 20px;
+        background-color: white;
+        border: 2px solid #0a1e6ed9;
+    }
+
+/* On mouse-over, add a grey background color */
+    .checkbox-container:hover input ~ .checkbox-checkmark {
+        background-color: #ccc;
+    }
+
+/* When the checkbox is checked, add a blue background */
+    .checkbox-container input:checked ~ .checkbox-checkmark {
+        background-color: #0a1e6ed9;
+    }
+
+/* Create the checkmark/indicator (hidden when not checked) */
+    .checkbox-container .checkbox-checkmark:after {
+        content: "";
+        position: absolute;
+        display: none;
+    }
+
+/* Show the checkmark when checked */
+    .checkbox-container input:checked ~ .checkbox-checkmark:after {
+        display: block;
+    }
+
+/* Style the checkmark/indicator */
+    .checkbox-container .checkbox-checkmark:after {
+        left: 5px;
+        top: 2px;
+        width: 5px;
+        height: 10px;
+        border: solid white;
+        border-width: 0 3px 3px 0;
+        -webkit-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+        transform: rotate(45deg);
+    }

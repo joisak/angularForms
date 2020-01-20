@@ -1,12 +1,6 @@
-<!--  <div class="root">
-    <label class="label" *ngIf="label" for="text-input">{{ label }}<span class="required" *ngIf="required">*</span></label>
-    <input [(ngModel)]="value" [type]="type" [name]="name" [required]="required" (change)="changeValue(name, $event)" on-focusout="focusOutFunction($event.target.value)" >
-    <span *ngIf="errorMessage && error" class="error-message">{{errorMessage}}</span>
-</div> 
- -->
 
 <div class="root">
-  <label class="label" *ngIf="label" for="text-input"
+  <label class="block-label" *ngIf="label" for="text-input"
     >{{ label }}<span class="required" *ngIf="required">*</span></label
   >
   <input

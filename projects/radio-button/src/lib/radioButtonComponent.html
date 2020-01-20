@@ -1,5 +1,5 @@
-<label class="label">
-  {{ label }}<span class="required" *ngIf="required">*</span>
+<!-- <label class="block-label">
+  {{ label }}<span class="required" *ngIf="custom-required">*</span>
 </label>
 <div class="root" *ngFor="let item of items">
   <input
@@ -15,3 +15,27 @@
   />
   <label [for]="item.label">{{ item.label }}</label>
 </div>
+ -->
+
+
+
+ <label class="block-label">
+  {{ label }}<span class="required" *ngIf="custom-required">*</span>
+</label>
+<label class="root radio-container" *ngFor="let item of items">
+  {{ item.label }}
+  <input
+    [(ngModel)]="value"
+    [required]="required"
+    [disabled]="disabled"
+    type="radio"
+    [id]="item.label"
+    [attr.name]="item.name"
+    [name]="item.name"
+    [value]="item.label"
+    [attr.value]="item.label"
+  />
+  <span class="checkmark"></span>
+</label>
+
+ 

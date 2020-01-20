@@ -1,4 +1,4 @@
-<ui-form label="Ett formulär">
+<!-- <ui-form label="Ett formulär">
   <ui-textarea #item name="About me" label="About you my friend" required="true"></ui-textarea>
   <ui-select name="Coolaste bandet" [items]="['Bowling with Friends', 'Kottarna', 'Death From Above 1979']"
     label="Coolaste bandet"></ui-select>
@@ -10,4 +10,91 @@
   <ui-checkbox id="7" name="katt" label="Vilka djur föredrar du?" checkboxLabel="Katt"></ui-checkbox>
   <ui-checkbox id="fox" name="räv" checkboxLabel="räv"></ui-checkbox>
   <ui-checkbox id="fox" name="hermelin" checkboxLabel="Hermelin"></ui-checkbox>
+</ui-form>
+ -->
+
+<h1 class="display-4 first-header">Kundupplägg - adressändring</h1>
+<ui-form>
+  <div class="row no-gutters">
+    <div class="col-md-6 gutter-fix">
+      <h4>Avsändare</h4>
+      <div class="form-section">
+          <div class="row">
+              <div class="form-group col-md-6">
+                <ui-text-input name="Name" label="Name" type="text" required="true"></ui-text-input>
+              </div>
+              <div class="form-group col-md-6">
+                <ui-text-input name="Family Name" label="Efternamn" type="text" required="true"></ui-text-input>
+              </div>
+              <div class="form-group col-md-6">
+                <ui-text-input name="email" label="Email" type="email" required="true"></ui-text-input>
+              </div>
+              <div class="form-group col-md-6">
+                <ui-text-input name="Pohne" label="Telefonnummer" type="number" required="true"></ui-text-input>
+              </div>
+          </div>
+      </div>
+  </div>
+    <div class="col-md-6 gutter-fix">
+        <h4>Kund</h4>
+        <div class="form-section">
+            <div class="row">
+                <div class="form-group col-md-6">
+                  <ui-text-input name="Name" label="Name" type="text" required="true"></ui-text-input>
+                </div>
+                <div class="form-group col-md-6">
+                  <ui-text-input name="Family Name" label="Efternamn" type="text" required="true"></ui-text-input>
+                </div>
+                <div class="form-group col-md-6">
+                  <ui-text-input name="email" label="Email" type="email" required="true"></ui-text-input>
+                </div>
+                <div class="form-group col-md-6">
+                  <ui-text-input name="Pohne" label="Telefonnummer" type="number" required="true"></ui-text-input>
+                </div>
+            </div>
+        </div>
+    </div>
+  </div>
+
+  <div class="row no-gutters">
+    <div class="col-md-6 gutter-fix">
+      <h4>Avsändare</h4>
+      <div class="form-section">
+          <div class="row">
+              <div class="form-group col-md-6">
+                <ui-radio-button label="Välj din favorit" name="favvodjur"
+                [items]="[{label: 'Katt', name: 'favvodjur'}, {label: 'Hund', name: 'favvodjur'}]"></ui-radio-button>
+              </div>
+              <div class="form-group col-md-6">
+                <ui-text-input name="Family Name" label="Efternamn" type="text" required="true"></ui-text-input>
+              </div>
+              <div class="form-group col-md-6">
+                <ui-text-input name="email" label="Email" type="email" required="true"></ui-text-input>
+              </div>
+              <div class="form-group col-md-6">
+                <ui-text-input name="Pohne" label="Telefonnummer" type="number" required="true"></ui-text-input>
+              </div>
+          </div>
+      </div>
+  </div>
+    <div class="col-md-6 gutter-fix">
+        <h4>Kund</h4>
+        <div class="form-section">
+            <div class="row">
+                <div class="form-group col-md-6">
+                  <ui-text-input name="Name" label="Name" type="text" required="true"></ui-text-input>
+                </div>
+                <div class="form-group col-md-6">
+                  <ui-text-input name="Family Name" label="Efternamn" type="text" required="true"></ui-text-input>
+                </div>
+                <div class="form-group col-md-6">
+                  <ui-text-input name="email" label="Email" type="email" required="true"></ui-text-input>
+                </div>
+                <div class="form-group col-md-6">
+                  <ui-text-input name="Pohne" label="Telefonnummer" type="number" required="true"></ui-text-input>
+                </div>
+            </div>
+        </div>
+    </div>
+  </div>
 </ui-form>
