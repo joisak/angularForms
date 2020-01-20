@@ -15,6 +15,12 @@ import { FormExampleComponent } from './form-example/form-example.component';
 import { CommonService } from './common.service';
 import { CoolFormComponent } from './cool-form/cool-form.component';
 import { TestInputComponent, TestInputModule } from 'projects/test-input/src/public-api';
+import { HalfFormgroupDirective } from './half-formgroup.directive';
+import { NewRowDirective } from './new-row.directive';
+import { FormSectionDirective } from './form-section.directive';
+import { FormSectionRowDirective } from './form-section-row.directive';
+import { InputSectionDirective } from './input-section.directive';
+import { TopHeaderDirective } from './top-header.directive';
 
 
 const appRoutes = [
@@ -38,7 +44,14 @@ const appRoutes = [
   declarations: [
     AppComponent,
     FormExampleComponent,
-    CoolFormComponent
+    CoolFormComponent,
+    HalfFormgroupDirective,
+    NewRowDirective,
+    FormSectionDirective,
+    FormSectionRowDirective,
+    InputSectionDirective,
+    TopHeaderDirective,
+    
   ],
   imports: [
     RouterModule.forRoot(

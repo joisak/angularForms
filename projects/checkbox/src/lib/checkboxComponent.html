@@ -1,7 +1,8 @@
 <label class="block-label" *ngIf="label"
-  >{{ label }} <span class="required" *ngIf="required">*</span></label
+  >{{ label }} <span class="custom-required" *ngIf="required">*</span></label
 >
-<div class="root">
+<label class="root checkbox-container">
+  {{ checkboxLabel }}
   <input
     [(ngModel)]="value"
     [attr.id]="name"
@@ -12,7 +13,7 @@
     type="checkbox"
     [required]="required"
   />
-  <label [attr.for]="name">{{ checkboxLabel }}</label>
-</div>
+  <span class="checkbox-checkmark"></span>
+</label>
 
 

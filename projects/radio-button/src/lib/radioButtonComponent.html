@@ -1,5 +1,5 @@
 <!-- <label class="block-label">
-  {{ label }}<span class="required" *ngIf="custom-required">*</span>
+  {{ label }}<span class="required" *ngIf="required">*</span>
 </label>
 <div class="root" *ngFor="let item of items">
   <input
@@ -20,7 +20,7 @@
 
 
  <label class="block-label">
-  {{ label }}<span class="required" *ngIf="custom-required">*</span>
+  {{ label }}<span class="custom-required" *ngIf="required">*</span>
 </label>
 <label class="root radio-container" *ngFor="let item of items">
   {{ item.label }}

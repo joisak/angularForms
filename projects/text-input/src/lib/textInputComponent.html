@@ -1,7 +1,7 @@
 
 <div class="root">
   <label class="block-label" *ngIf="label" for="text-input"
-    >{{ label }}<span class="required" *ngIf="required">*</span></label
+    >{{ label }}<span class="custom-required" *ngIf="required">*</span></label
   >
   <input
     [(ngModel)]="value"
@@ -11,7 +11,7 @@
     [required]="required"
     on-focusout="focusOutFunction($event.target.value)"
   />
-  <span *ngIf="errorMessage && error" class="error-message"
+  <span  class="error-message" [ngClass]="{ 'show' : errorMessage && error }"
     >{{errorMessage}}</span
   >
 </div>

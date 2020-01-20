@@ -1,2 +1,2 @@
-<label class="block-label" [for]="id">{{ label }}<span class="required" *ngIf="required">*</span></label>
-<input [(ngModel)]="value"  [required]="required" [name]="name" type="date"  [disabled]="disabled" min="1940-01-01">
+<label class="block-label" [for]="id">{{ label }}<span class="custom-required" *ngIf="required"> *</span></label>
+<input [(ngModel)]="value" [attr.name]="name" [required]="required" [name]="name" type="date"  [disabled]="disabled" min="1940-01-01">

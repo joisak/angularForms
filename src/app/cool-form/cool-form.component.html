@@ -1,97 +1,47 @@
-<!-- <ui-form label="Ett formulär">
-  <ui-textarea #item name="About me" label="About you my friend" required="true"></ui-textarea>
-  <ui-select name="Coolaste bandet" [items]="['Bowling with Friends', 'Kottarna', 'Death From Above 1979']"
-    label="Coolaste bandet"></ui-select>
-  <ui-radio-button label="Välj din favorit" name="favvodjur"
-    [items]="[{label: 'Katt', name: 'favvodjur'}, {label: 'Hund', name: 'favvodjur'}]"></ui-radio-button>
-  <ui-radio-button [required]="true" label="Vill du ha löneökning?" name="mer pengar i fickan"
-    [items]="[{label: 'Ja', name: 'merpenger'}, {label: 'Nej', name: 'merpenger'}]"></ui-radio-button>
-  <ui-text-input name="Years?" label="How old are you?" type="number" required="true"></ui-text-input>
-  <ui-checkbox id="7" name="katt" label="Vilka djur föredrar du?" checkboxLabel="Katt"></ui-checkbox>
-  <ui-checkbox id="fox" name="räv" checkboxLabel="räv"></ui-checkbox>
-  <ui-checkbox id="fox" name="hermelin" checkboxLabel="Hermelin"></ui-checkbox>
-</ui-form>
- -->
-
-<h1 class="display-4 first-header">Kundupplägg - adressändring</h1>
+<h1 topHeader>Kundupplägg - adressändring</h1>
 <ui-form>
-  <div class="row no-gutters">
-    <div class="col-md-6 gutter-fix">
+  <div newRow>
+    <div halfFormGroup>
       <h4>Avsändare</h4>
-      <div class="form-section">
-          <div class="row">
-              <div class="form-group col-md-6">
-                <ui-text-input name="Name" label="Name" type="text" required="true"></ui-text-input>
-              </div>
-              <div class="form-group col-md-6">
-                <ui-text-input name="Family Name" label="Efternamn" type="text" required="true"></ui-text-input>
-              </div>
-              <div class="form-group col-md-6">
-                <ui-text-input name="email" label="Email" type="email" required="true"></ui-text-input>
-              </div>
-              <div class="form-group col-md-6">
-                <ui-text-input name="Pohne" label="Telefonnummer" type="number" required="true"></ui-text-input>
-              </div>
-          </div>
-      </div>
-  </div>
-    <div class="col-md-6 gutter-fix">
-        <h4>Kund</h4>
-        <div class="form-section">
-            <div class="row">
-                <div class="form-group col-md-6">
-                  <ui-text-input name="Name" label="Name" type="text" required="true"></ui-text-input>
-                </div>
-                <div class="form-group col-md-6">
-                  <ui-text-input name="Family Name" label="Efternamn" type="text" required="true"></ui-text-input>
-                </div>
-                <div class="form-group col-md-6">
-                  <ui-text-input name="email" label="Email" type="email" required="true"></ui-text-input>
-                </div>
-                <div class="form-group col-md-6">
-                  <ui-text-input name="Pohne" label="Telefonnummer" type="number" required="true"></ui-text-input>
-                </div>
-            </div>
-        </div>
-    </div>
-  </div>
-
-  <div class="row no-gutters">
-    <div class="col-md-6 gutter-fix">
-      <h4>Avsändare</h4>
-      <div class="form-section">
-          <div class="row">
-              <div class="form-group col-md-6">
+      <div formSection>
+          <div formSectionRow>
+              <div inputSection>
                 <ui-radio-button label="Välj din favorit" name="favvodjur"
                 [items]="[{label: 'Katt', name: 'favvodjur'}, {label: 'Hund', name: 'favvodjur'}]"></ui-radio-button>
               </div>
-              <div class="form-group col-md-6">
-                <ui-text-input name="Family Name" label="Efternamn" type="text" required="true"></ui-text-input>
+              <div inputSection>
+                <ui-text-input  type="number" required="true"
+                errorMessage="Detta fältet är obligatoriskt" label="Cool Number" name="Cool number">
+              </ui-text-input>
               </div>
-              <div class="form-group col-md-6">
-                <ui-text-input name="email" label="Email" type="email" required="true"></ui-text-input>
+              <div inputSection>
+                <ui-text-input name="email" label="Email" type="email"></ui-text-input>
               </div>
-              <div class="form-group col-md-6">
-                <ui-text-input name="Pohne" label="Telefonnummer" type="number" required="true"></ui-text-input>
+              <div inputSection>
+                <ui-text-input name="Pohne" label="Telefonnummer" type="number"></ui-text-input>
               </div>
           </div>
       </div>
   </div>
+
+
     <div class="col-md-6 gutter-fix">
         <h4>Kund</h4>
         <div class="form-section">
             <div class="row">
                 <div class="form-group col-md-6">
-                  <ui-text-input name="Name" label="Name" type="text" required="true"></ui-text-input>
+                  <ui-checkbox id="7" name="katt" label="Vilka djur föredrar du?" checkboxLabel="Katt"></ui-checkbox>
+                  <ui-checkbox id="fox" name="räv" checkboxLabel="räv"></ui-checkbox>
+                  <ui-checkbox id="fox" name="hermelin" checkboxLabel="Hermelin"></ui-checkbox>
                 </div>
                 <div class="form-group col-md-6">
-                  <ui-text-input name="Family Name" label="Efternamn" type="text" required="true"></ui-text-input>
+                  <ui-text-input name="Family Name" label="Efternamn" type="text"></ui-text-input>
                 </div>
                 <div class="form-group col-md-6">
-                  <ui-text-input name="email" label="Email" type="email" required="true"></ui-text-input>
+                  <ui-datepicker required="true" (eventValue)="valueEventHandler($event)" name="date" label="Pick any date"></ui-datepicker>
                 </div>
                 <div class="form-group col-md-6">
-                  <ui-text-input name="Pohne" label="Telefonnummer" type="number" required="true"></ui-text-input>
+                  <ui-text-input name="Pohne" label="Telefonnummer" type="number"></ui-text-input>
                 </div>
             </div>
         </div>

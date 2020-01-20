@@ -1,6 +1,6 @@
 <div class="root">
   <label class="block-label" *ngIf="label" for="textarea"
-    >{{ label }} <span class="required" *ngIf="required">*</span></label
+    >{{ label }} <span class="custom-required" *ngIf="required">*</span></label
   >
   <textarea
     [(ngModel)]="value"
@@ -13,7 +13,7 @@
     [rows]="rows"
     on-focusout="focusOutFunction($event.target.value)"
   ></textarea>
-  <span *ngIf="errorMessage && error" class="error-message"
+  <span class="error-message" [ngClass]="{ 'show' : errorMessage && error }"
     >{{errorMessage}}</span
   >
 </div>

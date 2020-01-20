@@ -6,4 +6,21 @@
         font-size: 14px;
         padding: 4px;
     }
+    .error-message {
+        position: absolute;
+        left: 0;
+        bottom: 0px;
+        color: red;
+        background: #ff002d14;
+        width: 100%;
+        transition: all 0.2s ease;
+        visibility: hidden;
+        opacity: 0;
+        &.show {
+            bottom: -24px;
+            visibility: visible;
+            opacity: 1;
+           
+        }
+    }
 }

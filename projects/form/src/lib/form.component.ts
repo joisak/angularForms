@@ -15,10 +15,11 @@ export class FormComponent implements OnInit {
   setValue(input) {
     for (var i = 0; i < input.length; i++) {
       if(input[i].type == 'radio') {
-        if(input[i].checked) {
-          this.formData[input[i].name] = input[i].value
-        }
-      } else {
+        input[i].checked ? this.formData[input[i].name] = input[i].value : '';
+      }else if(input[i].type == 'checkbox') {
+        input[i].checked ? this.formData[input[i].name] = true :  this.formData[input[i].name] = false;
+      }
+      else {
         this.formData[input[i].name] = input[i].value;
       }
     }
