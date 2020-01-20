@@ -13,6 +13,7 @@
     [(ngModel)]="value"
     [type]="type"
     [name]="name"
+    [attr.name]="name"
     [required]="required"
     on-focusout="focusOutFunction($event.target.value)"
   />

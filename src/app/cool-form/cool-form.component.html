@@ -1,75 +1,13 @@
-<form
-  ngNativeValidate
-  #form="ngForm"
-  #validations="ngForm"
-  (ngSubmit)="submit(form.value, validations)"
->
-  <div class="container">
-    <div class="row">
-      <div class="col-md-6">
-        <ui-checkbox
-          [ngModel]
-          id="7"
-          name="vill du ha en katt?"
-          label="Want to go home and cry?"
-          checkboxLabel="Katt?"
-        ></ui-checkbox>
-        <ui-checkbox
-          [ngModel]
-          id="hund"
-          name="hehe"
-          checkboxLabel="räv?"
-        ></ui-checkbox>
-      </div>
-      <div class="col-md-6">
-        <ui-textarea
-          [ngModel]
-          name="About me"
-          label="About you my friend"
-          required="true"
-        ></ui-textarea>
-      </div>
-      <div class="col-md-6">
-        <ui-text-input
-          [ngModel]
-          name="Years?"
-          label="How old are you?"
-          type="text"
-          required="true"
-        ></ui-text-input>
-      </div>
-      <div class="col-md-6">
-        <ui-radio-button
-          [ngModel]
-          name="Gender"
-          [inputName]="gender"
-          [id]="gender"
-          label="Välj kön"
-          [inputName]="gender"
-          [items]="[
-            { name: 'gender', label: 'Female', id: '1' },
-            { name: 'gender', label: 'Male', id: '1' },
-            { name: 'gender', label: 'Other', id: '1' }
-          ]"
-        ></ui-radio-button>
-        <ui-radio-button
-          [inputName]="gender"
-          [ngModel]
-          required="true"
-          name="Cool"
-          [id]="cool"
-          id="yeah"
-          label="Välj coolhet"
-          [items]="[
-            { name: 'cool1', label: 'störtcool' },
-            { name: 'cool1', label: 'megacool' },
-            { name: 'cool1', label: 'fiskecool' }
-          ]"
-        ></ui-radio-button>
-      </div>
-    </div>
-    <div class="action-row">
-      <button type="submit">Send</button>
-    </div>
-  </div>
-</form>
+<ui-form label="Ett formulär">
+  <ui-textarea #item name="About me" label="About you my friend" required="true"></ui-textarea>
+  <ui-select name="Coolaste bandet" [items]="['Bowling with Friends', 'Kottarna', 'Death From Above 1979']"
+    label="Coolaste bandet"></ui-select>
+  <ui-radio-button label="Välj din favorit" name="favvodjur"
+    [items]="[{label: 'Katt', name: 'favvodjur'}, {label: 'Hund', name: 'favvodjur'}]"></ui-radio-button>
+  <ui-radio-button [required]="true" label="Vill du ha löneökning?" name="mer pengar i fickan"
+    [items]="[{label: 'Ja', name: 'merpenger'}, {label: 'Nej', name: 'merpenger'}]"></ui-radio-button>
+  <ui-text-input name="Years?" label="How old are you?" type="number" required="true"></ui-text-input>
+  <ui-checkbox id="7" name="katt" label="Vilka djur föredrar du?" checkboxLabel="Katt"></ui-checkbox>
+  <ui-checkbox id="fox" name="räv" checkboxLabel="räv"></ui-checkbox>
+  <ui-checkbox id="fox" name="hermelin" checkboxLabel="Hermelin"></ui-checkbox>
+</ui-form>

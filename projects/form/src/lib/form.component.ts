@@ -1,29 +1,41 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'ui-form',
-  templateUrl:'./FormComponent.html',
+  templateUrl: './FormComponent.html',
   styles: []
 })
 export class FormComponent implements OnInit {
 
+  @Input() label: string;
+  formData = {};
+
   constructor() { }
 
-  public obj = [];
-
-  valueEventHandler($event: any) {
-    Object.assign( this.obj, $event);
-    // console.log(this.obj);
+  setValue(input) {
+    for (var i = 0; i < input.length; i++) {
+      if(input[i].type == 'radio') {
+        if(input[i].checked) {
+          this.formData[input[i].name] = input[i].value
+        }
+      } else {
+        this.formData[input[i].name] = input[i].value;
+      }
+    }
   }
-  
 
-  onSubmit(x) {
-    console.log(x);
-    console.log('Value array --> ', this.obj);
-  }
+  submit() {
+    let form = document.getElementsByTagName("form");
+    let inputs = form[0].getElementsByTagName("input"),
+      textarea = form[0].getElementsByTagName('textarea'),
+      select = form[0].getElementsByTagName('select');
 
-  onTextChange(text: string) {
-    console.log('OUTPUT ',text);
+    this.setValue(inputs);
+    this.setValue(textarea);
+    this.setValue(select);
+
+    console.log('FORM DATA --->', this.formData);
+
   }
 
   ngOnInit() {
