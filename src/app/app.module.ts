@@ -34,6 +34,7 @@ import { CustomerSetUpExternalSwedishCustomerComponent } from './pages/forms/cus
 import { CustomerSetUpGlobusComponent } from './pages/forms/customer-set-up-globus/customer-set-up-globus.component';
 import { CustomerSetUpPalletCustomerComponent } from './pages/forms/customer-set-up-pallet-customer/customer-set-up-pallet-customer.component';
 import { CustomerSetUpSchenkerCompaniesComponent } from './pages/forms/customer-set-up-schenker-companies/customer-set-up-schenker-companies.component';
+import { ExtendCreditComponent } from './pages/forms/other/extend-credit/extend-credit.component';
 
 
 const appRoutes = [
@@ -77,6 +78,9 @@ const appRoutes = [
     path: 'customer-set-schenker-companies', component: CustomerSetUpSchenkerCompaniesComponent
   }, 
   { 
+    path: 'external-credit', component: ExtendCreditComponent
+  }, 
+  { 
     path: 'example', component: FormExampleComponent
   },
   { 
@@ -113,6 +117,7 @@ const appRoutes = [
     CustomerSetUpGlobusComponent,
     CustomerSetUpPalletCustomerComponent,
     CustomerSetUpSchenkerCompaniesComponent,
+    ExtendCreditComponent,
     
   ],
   imports: [
