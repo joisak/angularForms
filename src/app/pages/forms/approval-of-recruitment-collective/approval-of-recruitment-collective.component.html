@@ -1,0 +1,145 @@
+
+    <h2>KOLLEKTIVANSTÄLLD</h2>
+    <div class="paragraph-wrapper">
+        <p>
+            Ovanstående Nr registreras ALLTID i avsedd ruta på det nya anställningsbeviset/avtalet
+        </p>
+       
+        <p>På grund av det finansiella läget, gäller för närvarande att högsta ledningen i Schenker Sverige skall attestera SAMTLIGA tillsättningar av kollektivanställda inom Schenker Sverige. 
+        Detta innebär att alla rekryteringar/inhyrningar ska godkännas av DC och/ eller VD för bolag samt HR Direktör Sverige.</p>
+        <p>
+            Innan tillsättning av en befattning görs så är det av största vikt att en grundlig genomgång av enhetens arbete görs för att pröva om arbetsuppgifterna kan fördelas ut på redan befintlig personal.
+            När ovanstående är gjort och visar att en rekrytering/inhyrning är nödvändig för att säkerställa kvaliteten i enhetens arbete gentemot externa och interna kunder och inom ramen för årets budget och enhetens resultat, skall denna blankett fyllas i och attesteras vid samtliga prov- och tillsvidareanställningar.
+            I nuläget skall även semestervikariat, längre vikariat och timanställning samt inhyrningar godkännas innan tillsättning.
+        </p>
+      
+        <p>
+            Alla rekryteringar som har en längd på mer än 14 dagar skall godkännas enligt denna rutin.
+            Undantag från ovan gäller timanställda ”Poolare”, dvs. de anställningar som gäller för ”viss tid vid behov av extra arbetskraft”.
+            Även om timanställd ”Poolare” går på månadsschema så kan schema ändras med 14 dagars varsel och utifrån detta behövs inget äskande.
+        </p>
+        
+     
+    </div>
+
+
+
+
+
+
+
+    <form ngNativeValidate (ngSubmit)="onSubmit(form)" #form="ngForm">
+        <input type="hidden" [(ngModel)]="formName"  name="myForm.FormName"/>
+        <div class="row">
+            <div class="col-md-12">
+                <h4>Ansökan</h4>
+                <div class="form-section">
+
+                    <div class="row">
+
+                        <div class="form-group col-md-6">
+                            <label class="block-label">Ärende</label>
+                            <div>
+                                <label class="radio-container">
+                                    Ersättningsrekrtytering
+                                    <input type="radio" checked="checked" value="Ersättningsrekrtytering"  [ngModel] name="myForm.TypeOfRecruitment">
+                                    <span class="checkmark"></span>
+                                </label>
+                                <label class="radio-container">
+                                    Utökning av tjänst
+                                    <input type="radio" value=" Utökning av tjänst"  [ngModel] name="myForm.TypeOfRecruitment">
+                                    <span class="checkmark"></span>
+                                </label>
+                            </div>
+                        </div>
+
+
+                        <div class="form-group col-md-3">
+                            <label>Enhet </label>
+                            <input class="form-control"  [ngModel] name="myForm.Unit" type="text" value="" />
+                        </div>
+                        <div class="form-group col-md-3">
+                            <label class="normal">Ort </label>
+                            <input class="form-control"  [ngModel] name="myForm.City" type="text" value="" />
+                        </div>
+                        <div class="form-group col-md-3">
+                            <label>Kostnadsställe</label><br />
+                            <input class="form-control"  [ngModel] name="myForm.CostCenter" type="text" value="" />
+                        </div>
+                        <div class="form-group col-md-3">
+                            <label>Befattning </label>
+                            <input class="form-control"  [ngModel] name="myForm.position" type="text" value="" />
+                        </div>
+
+                        <div class="form-group col-md-3">
+                            <label>Efterträdare till</label>
+                            <input class="form-control"  [ngModel] name="myForm.PositionInsteadOf" type="text" value="" required />
+                        </div>
+                        <div class="form-group col-md-3">
+                            <label>Namn på kandidat</label>
+                            <input class="form-control"  [ngModel] name="myForm.CandidatesName" type="number" value="" required />
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label>Alt 1. Lönekostnad/år exkl. social avg. (Uppge lönespann)</label>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <input class="form-control" placeholder="Från"  [ngModel] name="myForm.LaborCostsFrom" type="number" value="" />
+                                </div>
+                                <div class="col-md-6">
+                                    <input class="form-control" placeholder="Till"  [ngModel] name="myForm.LaborCostsTo" type="number" value="" />
+                                </div>
+                            </div>
+  
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label class="block-label">Alt 2. Enl. Kollektivavtal Terminal/Åkeri </label>
+                            <div>
+                                <label class="checkbox-container">
+                               Ja
+                                    <input type="checkbox"  [ngModel] name="myForm.Collectiveagreement" ng-true-value="'Yes, collective agreement '">
+                                    <span class="checkbox-checkmark"></span>
+                                </label>
+
+                  
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row no-gutters">
+            <div class="col-md-6 gutter-fix">
+                <h4>Motivering</h4>
+                <div class="form-section">
+                    <div class="row">
+                        <div class="form-group col-md-12">
+                            <label>Skriftlig motivering för rekrytering<span title="Denna fråga är obligatorisk" class="custom-required">&nbsp;*</span></label>
+              
+                            <textarea class="form-control"  [ngModel] name="myForm.Justification" type="text" value="" required></textarea>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 gutter-fix">
+                <h4>Närmaste Chef</h4>
+                <div class="form-section">
+                    <div class="row">
+                        <div class="form-group col-md-6">
+                            <label>Fullständigt namn</label>
+                            <input class="form-control"  [ngModel] name="myForm.ImmediateSupervisor" type="text" value="" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="action-row">
+            <button type="submit"  class="btn custom-button mb-2">Skicka formulär</button>
+
+        </div>
+    </form>
+
+
+
+

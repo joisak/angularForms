@@ -35,6 +35,9 @@ import { CustomerSetUpGlobusComponent } from './pages/forms/customer-set-up-glob
 import { CustomerSetUpPalletCustomerComponent } from './pages/forms/customer-set-up-pallet-customer/customer-set-up-pallet-customer.component';
 import { CustomerSetUpSchenkerCompaniesComponent } from './pages/forms/customer-set-up-schenker-companies/customer-set-up-schenker-companies.component';
 import { ExtendCreditComponent } from './pages/forms/other/extend-credit/extend-credit.component';
+import { HiringReplacementSalaryApplicationComponent } from './pages/forms/hiring-replacement-salary-application/hiring-replacement-salary-application.component';
+import { ApprovalOfRecruitmentComponent } from './pages/forms/approval-of-recruitment/approval-of-recruitment.component';
+import { ApprovalOfRecruitmentCollectiveComponent } from './pages/forms/approval-of-recruitment-collective/approval-of-recruitment-collective.component';
 
 
 const appRoutes = [
@@ -78,6 +81,15 @@ const appRoutes = [
     path: 'customer-set-schenker-companies', component: CustomerSetUpSchenkerCompaniesComponent
   }, 
   { 
+    path: 'approval-of-reqruitment-collective', component: ApprovalOfRecruitmentCollectiveComponent
+  }, 
+  { 
+    path: 'approval-of-reqruitment', component: ApprovalOfRecruitmentComponent
+  }, 
+  { 
+    path: 'hiring-replacement-salary-application', component: HiringReplacementSalaryApplicationComponent
+  }, 
+  { 
     path: 'external-credit', component: ExtendCreditComponent
   }, 
   { 
@@ -118,6 +130,9 @@ const appRoutes = [
     CustomerSetUpPalletCustomerComponent,
     CustomerSetUpSchenkerCompaniesComponent,
     ExtendCreditComponent,
+    HiringReplacementSalaryApplicationComponent,
+    ApprovalOfRecruitmentComponent,
+    ApprovalOfRecruitmentCollectiveComponent,
     
   ],
   imports: [

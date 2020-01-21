@@ -1,0 +1,191 @@
+    <h2>WHITE COLLAR</h2>
+    <div class="paragraph-wrapper">
+        <p>
+            Each White Collar Hiring/Replacement/Salary Increase within Cluster Business Units and all Country Hiring/Replacements/Salary Increases on all levels within the Cluster shall be approved by
+            Cluster CEO & Cluster CHRO by this template.</p>
+    </div>
+
+    <form ngNativeValidate (ngSubmit)="onSubmit(form)" #form="ngForm">
+        <input type="hidden" [(ngModel)]="formName"  name="myForm.FormName" />
+        <div class="row">
+            
+            <div class="col-md-12">
+                <h4>
+                    Application
+                </h4>
+                <div class="form-section">
+
+                    <div class="row">
+                        <div class="form-group col-md-6">
+                            <label class="block-label">Type of request</label>
+                            <div>
+                                <label class="radio-container">
+                                    New Hire
+                                    <input type="radio" checked="checked" value="New Hire"  [ngModel] name="myForm.RequestType">
+                                    <span class="checkmark"></span>
+                                </label>
+                                <label class="radio-container">
+                                    Replacement
+                                    <input type="radio" value="Replacement"  [ngModel] name="myForm.RequestType">
+                                    <span class="checkmark"></span>
+                                </label>
+                                <label class="radio-container">
+                                    Salary Increase
+                                    <input type="radio" value="SalaryIncrease"  [ngModel] name="myForm.RequestType">
+                                    <span class="checkmark"></span>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="form-group col-md-3">
+                            <label>Business Unit </label>
+                            <input class="form-control"  [ngModel] name="myForm.Unit" type="text" value="" />
+                        </div>
+                        <div class="form-group col-md-3">
+                            <label class="normal">Work location </label>
+                            <input class="form-control"  [ngModel] name="myForm.WorkLocation" type="text" value="" />
+                        </div>
+                        <div class="form-group col-md-3">
+                            <label>Cost will be taken by BU/Country</label><br />
+                            <input class="form-control"  [ngModel] name="myForm.CostCenter" type="text" value="" />
+                        </div>
+                        <div class="form-group col-md-3">
+                            <label>Position </label>
+                            <input class="form-control"  [ngModel] name="myForm.Position" type="text" value="" />
+                        </div>
+
+                        <div class="form-group col-md-3">
+                            <label>Name of current position holder</label>
+                            <input class="form-control"  [ngModel] name="myForm.NameOfCurrentPositionHolder" type="text" value="" required />
+                        </div>
+                        <div class="form-group col-md-3">
+                            <label>Name of candidate (if applicable)</label>
+                            <input class="form-control"  [ngModel] name="myForm.CandidatesName" type="number" value="" required />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-12">
+                <h4>For New Hire and Replacement</h4>
+                <div class="form-section">
+                    <div class="row">
+                        <div class="form-group col-md-4">
+                            <label>Yearly salary between: </label>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <input class="form-control" placeholder="From"  [ngModel] name="myForm.YearlySalaryHireReplacementFrom" type="number" value="" />
+                                </div>
+                                <div class="col-md-6">
+                                    <input class="form-control" placeholder="To"  [ngModel] name="myForm.YearlySalaryHireReplacementTo" type="number" value="" />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group col-md-2">
+                            <label class="block-label">Bonus</label>
+                            <div>
+                                <label class="radio-container">
+                                    Yes
+                                    <input type="radio" checked="checked" value="Yes"  [ngModel] name="myForm.BonusApproved">
+                                    <span class="checkmark"></span>
+                                </label>
+                                <label class="radio-container">
+                                    No
+                                    <input type="radio" value="No"  [ngModel] name="myForm.BonusApproved">
+                                    <span class="checkmark"></span>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="form-group col-md-2">
+                            <label>Bonus amount</label><br />
+                            <input class="form-control"  [ngModel] name="myForm.BonusAmount" type="number" value="" />
+                        </div>
+                        <div class="form-group col-md-4">
+                            <label class="block-label">Company Car</label>
+                            <div>
+                                <label class="radio-container">
+                                    Yes
+                                    <input type="radio" checked="checked" value="Yes"  [ngModel] name="myForm.CompanyCar">
+                                    <span class="checkmark"></span>
+                                </label>
+                                <label class="radio-container">
+                                    No
+                                    <input type="radio" value="No"  [ngModel] name="myForm.CompanyCar">
+                                    <span class="checkmark"></span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-12">
+                <h4>For Salary Increase</h4>
+                <div class="form-section">
+                    <div class="row">
+                        <div class="form-group col-md-6">
+                            <label>Yearly Current Salary in local currency</label>
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <input class="form-control" placeholder="Fix"  [ngModel] name="myForm.YearlySalaryIncreaseCurrentFix" type="number" value="" />
+                                </div>
+                                <div class="col-md-4">
+                                    <input class="form-control" placeholder="Target Bouns"  [ngModel] name="myForm.YearlySalaryIncreaseCurrentTargetBonus" type="number" value="" />
+                                </div>
+                                <div class="col-md-4">
+                                    <input class="form-control" placeholder="Total Target Bonus"  [ngModel] name="myForm.YearlySalaryIncreaseCurrentTotalTargetBonus" type="number" value="" />
+                                </div>
+
+
+                            </div>
+
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label>Proposed New Salary in local currency</label>
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <input class="form-control" placeholder="Fix"  [ngModel] name="myForm.YearlySalaryIncreaseNewFix" type="number" value="" />
+                                </div>
+                                <div class="col-md-4">
+                                    <input class="form-control" placeholder="Target Bonus"  [ngModel] name="myForm.YearlySalaryIncreaseNewTargetBonus" type="number" value="" />
+                                </div>
+                                <div class="col-md-4">
+                                    <input class="form-control" placeholder="Total Target Bonus"  [ngModel] name="myForm.YearlySalaryIncreaseNewTotalTargetBonus" type="number" value="" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row no-gutters">
+            <div class="col-md-6 one-gutter-fix-left">
+                <h4>Justification</h4>
+                <div class="form-section">
+                    <div class="row">
+                        <div class="form-group col-md-12">
+                            <label>
+                                Written motivation for recruitment<span title="Denna fråga är obligatorisk" class="custom-required">&nbsp;*</span>
+                            </label>
+                            <textarea class="form-control"  [ngModel] name="myForm.Justification" type="text" value="" required></textarea>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="action-row">
+            <button type="submit"  class="btn custom-button mb-2">Skicka formulär</button>
+
+        </div>
+    </form>
+
+
+
+
+
+
+
