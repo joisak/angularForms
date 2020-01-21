@@ -21,12 +21,36 @@ import { FormSectionDirective } from './directives/form-section.directive';
 import { FormSectionRowDirective } from './directives/form-section-row.directive';
 import { InputSectionDirective } from './directives/input-section.directive';
 import { TopHeaderDirective } from './directives/top-header.directive';
-import { FormsComponent } from './pages/forms/forms.component';
+import { StartComponent } from './pages/start/start.component';
+import { CustomerChangeAddressComponent } from './pages/forms/customer-change-address/customer-change-address.component';
+import { CustomerSetUpChangeComponent } from './pages/forms/customer-set-up-change/customer-set-up-change.component';
+import { CustomerSetUpCIELComponent } from './pages/forms/customer-set-up-ciel/customer-set-up-ciel.component';
+import { CustomerSetUpCIELAddressCustomerComponent } from './pages/forms/customer-set-up-cieladdress-customer/customer-set-up-cieladdress-customer.component';
+import { CustomerSetUpCIELChangeComponent } from './pages/forms/customer-set-up-cielchange/customer-set-up-cielchange.component';
+import { CustomerSetUpCompanyInternalSchenkerComponent } from './pages/forms/customer-set-up-company-internal-schenker/customer-set-up-company-internal-schenker.component';
 
 
 const appRoutes = [
   { 
-    path: '', component: FormsComponent 
+    path: '', component: StartComponent 
+  },
+  { 
+    path: 'customer-change-address', component: CustomerChangeAddressComponent 
+  },
+  { 
+    path: 'customer-setup-change', component: CustomerSetUpChangeComponent
+  },
+  { 
+    path: 'customer-setup-ciel', component: CustomerSetUpCIELComponent
+  },
+  { 
+    path: 'customer-setup-ciel-address-customer', component: CustomerSetUpCIELAddressCustomerComponent
+  },
+  { 
+    path: 'customer-setup-ciel-change', component: CustomerSetUpCIELChangeComponent
+  },
+  { 
+    path: 'customer-set-up-company-internal-schenker', component: CustomerSetUpCompanyInternalSchenkerComponent
   },
   { 
     path: 'example', component: FormExampleComponent
@@ -35,7 +59,7 @@ const appRoutes = [
     path: 'cool', component: CoolFormComponent
   },
   {
-    path: '**', component: AppComponent
+    path: '**', component: StartComponent 
   }
 ];
 
@@ -52,7 +76,13 @@ const appRoutes = [
     FormSectionRowDirective,
     InputSectionDirective,
     TopHeaderDirective,
-    FormsComponent,
+    StartComponent,
+    CustomerChangeAddressComponent,
+    CustomerSetUpChangeComponent,
+    CustomerSetUpCIELComponent,
+    CustomerSetUpCIELAddressCustomerComponent,
+    CustomerSetUpCIELChangeComponent,
+    CustomerSetUpCompanyInternalSchenkerComponent,
     
   ],
   imports: [

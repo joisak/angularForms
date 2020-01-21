@@ -7,15 +7,10 @@ export class CommonService {
 
   constructor() { }
 
-  valueEventHandler($event, obj) {
-    Object.assign( obj, $event);
-    console.log(obj);
-  }
-
-  onSubmit(x, obj) {
+  onSubmit(x) {
     console.log(x);
     console.log('Values');
-    console.log('JUST SNYGGT --->, ', obj);
+    console.log('JUST SNYGGT --->, ', x.form.value);
   }
 
 }
