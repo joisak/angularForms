@@ -1,0 +1,137 @@
+<h1 class="display-4 first-header">Kundupplägg - övriga Schenkerbolag</h1>
+
+        <form ngNativeValidate (ngSubmit)="onSubmit(form)" #form="ngForm">
+            <input type="hidden" [(ngModel)]="formName" name="myForm.FormName" />
+
+            <div class="row no-gutters">
+                <div class="col-md-6 gutter-fix">
+                    <h4>Avsändare</h4>
+                    <div class="form-section">
+                        <div class="row">
+                            <div class="form-group col-md-6">
+                                <label>Förnamn<span title="Denna fråga är obligatorisk" class="custom-required">&nbsp;*</span></label>
+                                <input class="form-control" [ngModel]  name="myForm.FirstName" type="text" value="" required />
+                            </div>
+
+                            <div class="form-group col-md-6">
+                                <label class="normal">Efternamn</label>
+                                <input class="form-control " [ngModel]  name="myForm.LastName" type="text" value="" required />
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label class="normal">Telefon</label>
+                                <input class="form-control " [ngModel]  name="myForm.Telephone" title="" type="tel" value="" required />
+                            </div>
+                            <div class="frorm-group col-md-6">
+                                <label class="normal">E-post<span title="Denna fråga är obligatorisk" class="custom-required">&nbsp;*</span></label>
+                                <input class="form-control " [ngModel]  name="myForm.Email" type="email" value="" required />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 gutter-fix">
+                    <h4>Kund</h4>
+                    <div class="form-section">
+                        <div class="row">
+                            <div class="form-group col-md-6">
+                                <label>Schenkerbolag<span title="Denna fråga är obligatorisk" class="custom-required">&nbsp;*</span></label>
+                                <input class="form-control" [ngModel]  name="myForm.SchenkerCompany" type="number" value="" required />
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label>VAT/Organisationsnummer<span title="Denna fråga är obligatorisk" class="custom-required">&nbsp;*</span></label>
+                                <input class="form-control" [ngModel]  name="myForm.OrginasationNumber" type="number" value="" required />
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label>Företagsnamn <span title="Denna fråga är obligatorisk" class="custom-required">&nbsp;*</span></label>
+                                <input class="form-control" [ngModel]  name="myForm.CompanyName" type="text" value="" required />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-12">
+                    <h4>Adress</h4>
+                    <div class="form-section">
+
+                        <div class="row">
+                            <div class="form-group col-md-3">
+                                <label>Gatuadress</label>
+                                <input class="form-control" [ngModel]  name="myForm.StreetAddress" type="text" value="" />
+                            </div>
+                            <div class="form-group col-md-3">
+
+                                <label class="normal">Postnummer</label>
+                                <input class="form-control" [ngModel]  name="myForm.PostalCode" type="text" value="" />
+                            </div>
+
+                            <div class="form-group col-md-3">
+                                <label>Ort</label><br />
+                                <input class="form-control" [ngModel]  name="myForm.City" type="text" value="" />
+                            </div>
+                            <div class="form-group col-md-3">
+                                <label>Land</label><br />
+                                <input class="form-control" [ngModel]  name="myForm.Country" type="text" value="" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-12">
+                    <h4>Fakturaadress</h4>
+                    <div class="form-section">
+                        <div class="row">
+                            <div class="form-group col-md-3">
+                                <label>Fakturaadress</label>
+                                <input class="form-control" [ngModel]  name="myForm.BillingAddress" type="text" value="" />
+                            </div>
+
+                            <div class="form-group col-md-3">
+                                <label>Postnummer</label><br />
+                                <input class="form-control" [ngModel]  name="myForm.BillingPostalCode" type="number" value="" />
+                            </div>
+
+                            <div class="form-group col-md-3">
+                                <label>Ort</label><br />
+                                <input class="form-control" [ngModel]  name="myForm.CityBilling" type="text" value="" />
+                            </div>
+                            <div class="form-group col-md-3">
+                                <label>Land</label><br />
+                                <input class="form-control" [ngModel]  name="myForm.CountryBilling" type="text" value="" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-12">
+         
+                    <div class="form-section">
+                        <div class="row">
+
+                            <div class="form-group col-md-3">
+                                <label>Avdelning (C/O)</label>
+                                <input class="form-control" [ngModel]  name="myForm.Department" type="text" value="" />
+                            </div>
+
+                            <div class="form-group col-md-3">
+                                <label>Kontonotis</label>
+                                <input class="form-control" [ngModel]  name="myForm.AccountNote" type="text" value="" />
+                            </div>
+
+                            <div class="form-group col-md-3">
+                                <label>Övrigt</label>
+                                <textarea class="form-control" [ngModel]  name="myForm.Other" maxlength="4000" title="" type="text" value=""></textarea>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="action-row">
+                <button type="submit"  class="btn custom-button mb-2">Skicka formulär</button>  
+            </div>
+        </form>

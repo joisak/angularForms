@@ -28,6 +28,12 @@ import { CustomerSetUpCIELComponent } from './pages/forms/customer-set-up-ciel/c
 import { CustomerSetUpCIELAddressCustomerComponent } from './pages/forms/customer-set-up-cieladdress-customer/customer-set-up-cieladdress-customer.component';
 import { CustomerSetUpCIELChangeComponent } from './pages/forms/customer-set-up-cielchange/customer-set-up-cielchange.component';
 import { CustomerSetUpCompanyInternalSchenkerComponent } from './pages/forms/customer-set-up-company-internal-schenker/customer-set-up-company-internal-schenker.component';
+import { CustomerSetUpEmailPDFInvoiceComponent } from './pages/forms/customer-set-up-email-pdfinvoice/customer-set-up-email-pdfinvoice.component';
+import { CustomerSetUpExternalForeignCustomerComponent } from './pages/forms/customer-set-up-external-foreign-customer/customer-set-up-external-foreign-customer.component';
+import { CustomerSetUpExternalSwedishCustomerComponent } from './pages/forms/customer-set-up-external-swedish-customer/customer-set-up-external-swedish-customer.component';
+import { CustomerSetUpGlobusComponent } from './pages/forms/customer-set-up-globus/customer-set-up-globus.component';
+import { CustomerSetUpPalletCustomerComponent } from './pages/forms/customer-set-up-pallet-customer/customer-set-up-pallet-customer.component';
+import { CustomerSetUpSchenkerCompaniesComponent } from './pages/forms/customer-set-up-schenker-companies/customer-set-up-schenker-companies.component';
 
 
 const appRoutes = [
@@ -52,6 +58,24 @@ const appRoutes = [
   { 
     path: 'customer-set-up-company-internal-schenker', component: CustomerSetUpCompanyInternalSchenkerComponent
   },
+  { 
+    path: 'customer-set-up-email-pdf-invoice', component: CustomerSetUpEmailPDFInvoiceComponent
+  },
+  { 
+    path: 'customer-set-up-external-foreign-customer', component: CustomerSetUpExternalForeignCustomerComponent
+  },
+  { 
+    path: 'customer-set-up-external-swedish-customer', component: CustomerSetUpExternalSwedishCustomerComponent
+  },
+  { 
+    path: 'customer-set-up-globus', component: CustomerSetUpGlobusComponent
+  },
+  { 
+    path: 'customer-set-up-pallet', component: CustomerSetUpPalletCustomerComponent
+  }, 
+  { 
+    path: 'customer-set-schenker-companies', component: CustomerSetUpSchenkerCompaniesComponent
+  }, 
   { 
     path: 'example', component: FormExampleComponent
   },
@@ -83,6 +107,12 @@ const appRoutes = [
     CustomerSetUpCIELAddressCustomerComponent,
     CustomerSetUpCIELChangeComponent,
     CustomerSetUpCompanyInternalSchenkerComponent,
+    CustomerSetUpEmailPDFInvoiceComponent,
+    CustomerSetUpExternalForeignCustomerComponent,
+    CustomerSetUpExternalSwedishCustomerComponent,
+    CustomerSetUpGlobusComponent,
+    CustomerSetUpPalletCustomerComponent,
+    CustomerSetUpSchenkerCompaniesComponent,
     
   ],
   imports: [

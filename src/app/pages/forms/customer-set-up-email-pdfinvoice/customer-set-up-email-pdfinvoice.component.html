@@ -1,0 +1,86 @@
+
+        <h1 class="display-4 first-header">Kundupplägg - mail PDF-faktura</h1>
+
+        <form ngNativeValidate (ngSubmit)="onSubmit(form)" #form="ngForm">
+            <input type="hidden" [(ngModel)]="formName" name="myForm.FormName" />
+            <div class="row no-gutters">
+                <div class="col-md-6 gutter-fix">
+                    <h4>Avsändare</h4>
+                    <div class="form-section">
+                        <div class="row">
+                            <div class="form-group col-md-6">
+                                <label>Förnamn<span title="Denna fråga är obligatorisk" class="custom-required">&nbsp;*</span></label>
+                                <input class="form-control"   [ngModel] name="myForm.FirstName" type="text" value="" required />
+                            </div>
+
+                            <div class="form-group col-md-6">
+                                <label class="normal">Efternamn</label>
+                                <input class="form-control "   [ngModel] name="myForm.LastName" type="text" value="" required />
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label class="normal">Telefon</label>
+                                <input class="form-control "   [ngModel] name="myForm.Telephone" title="" type="tel" value="" required />
+                            </div>
+                            <div class="frorm-group col-md-6">
+                                <label class="normal">E-post<span title="Denna fråga är obligatorisk" class="custom-required">&nbsp;*</span></label>
+                                <input class="form-control "   [ngModel] name="myForm.Email" type="email" value="" required />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 gutter-fix">
+                    <h4>Kund</h4>
+                    <div class="form-section">
+                        <div class="row">
+                            <div class="form-group col-md-6">
+                                <label>VAT/Organisationsnummer<span title="Denna fråga är obligatorisk" class="custom-required">&nbsp;*</span></label>
+                                <input class="form-control"   [ngModel] name="myForm.VATOrgNumber" type="number" value="" required />
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label>Kundnummer</label>
+                                <input class="form-control"   [ngModel] name="myForm.CustomerNumber" type="text" value=""  />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="row">
+                <div class="col-md-12">
+       
+                    <div class="form-section">
+                        <div class="row">
+                            <div class="form-group col-md-6">
+                                <label>PDF adress <span title="Denna fråga är obligatorisk" class="custom-required">&nbsp;*</span></label>
+                                <input class="form-control"   [ngModel] name="myForm.PDFAddress" type="text" value="" required />
+                            </div>
+
+                            <div class="form-group col-md-6">
+                                <label class="block-label">Gäller ändringen hela organisationsnumret? <span title="Denna fråga är obligatorisk" class="custom-required">&nbsp;*</span></label>
+                                <div>
+                                    <label class="radio-container">
+                                        Ja
+                                        <input required type="radio" checked="checked" value="Ja"   [ngModel] name="myForm.WholeOrganisation">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                    <label class="radio-container">
+                                        Nej
+                                        <input required type="radio"  value="Nej"   [ngModel] name="myForm.WholeOrganisation">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                </div>
+                            </div>
+
+                            <div class="form-group col-md-6">
+                                <label>Övrigt</label>
+                                <textarea class="form-control"   [ngModel] name="myForm.Other" maxlength="4000" title="" type="text" value=""></textarea>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="action-row">
+                <button type="submit"  class="btn custom-button mb-2">Skicka formulär</button> 
+            </div>
+        </form>
