@@ -1,9 +1,9 @@
 import { Directive, Input, HostBinding } from '@angular/core';
 
 @Directive({
-  selector: '[formSection]'
+  selector: '[input]'
 })
-export class FormSectionDirective {
+export class InputSectionDirective {
 
   protected _elementClass: string[] = [];
 
@@ -18,8 +18,8 @@ export class FormSectionDirective {
   }
 
   constructor() {
-      this._elementClass.push('form-section');
+      this._elementClass.push('form-group');
+      this._elementClass.push('col-md-6');
   }
-
 
 }

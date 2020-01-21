@@ -1,7 +1,7 @@
 import { Directive, Input, HostBinding } from '@angular/core';
 
 @Directive({
-  selector: '[newRow]'
+  selector: '[row]'
 })
 export class NewRowDirective {
   protected _elementClass: string[] = [];

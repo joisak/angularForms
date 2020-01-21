@@ -5,13 +5,57 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Forms</title>
+  <title>SchreqForms</title>
 </head>
 
 <body>
+  <header class="mb-2">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4 brand-logo py-4">
+          <a href="/"><img alt="DB Schenker" class="sv-noborder c126" src="./assets/images/DB-Schenker-logo.png" /></a>
+        </div>
+      </div>
+    </div>
+  </header>
+  <div class="container main-content">
+    <router-outlet></router-outlet>
 
-  <router-outlet></router-outlet>
+  </div>
 
+  <footer>
+    <div class="footer-content container pt-3">
+      <div class="row">
+        <div class="col-md-3">
+          <div>
+            <h5><a>Kontakta oss</a></h5>
+            <ul class="list-unstyled">
+              <li class=""><a href="/extra/kontaktkort/itservicedeskitsd.5.4fea4557158a24c1f524f923.html">IT
+                  Servicedesk</a></li>
+              <li class=""><a title="länk till annan webbplats, öppnas i nytt fönster"
+                  href="https://db-planet.deutschebahn.com/pages/global-infrastructure-services/apps/content/home"
+                  rel="external">Global Infrastructure Services</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="col-md-3">
+          <h5>Information</h5>
+          <ul class="list-unstyled">
+            <li class="">Kontorsinformation</li>
+          </ul>
+        </div>
+
+        <div class="col-md-3 offset-md-3">
+          <h5>Schenker AB</h5>
+          <ul class="list-unstyled">
+            <li class="">412 97 Göteborg</li>
+            <li class=""><a href="tel:0317038000">Telefon: 031 - 703 80 00</a></li>
+            <li class="">Org.nr: 556250-3630</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
 </body>
-
 </html>

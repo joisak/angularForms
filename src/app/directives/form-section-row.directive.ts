@@ -1,14 +1,15 @@
 import { Directive, Input, HostBinding } from '@angular/core';
 
 @Directive({
-  selector: '[halfFormGroup]'
+  selector: '[inputWrapper]'
 })
-export class HalfFormgroupDirective {
+export class FormSectionRowDirective {
+
   protected _elementClass: string[] = [];
 
- 
-  @Input('class')
-  @HostBinding('class')
+@Input('class')
+@HostBinding('class')
+
   get elementClass(): string {
       return this._elementClass.join(' ');
   }
@@ -17,8 +18,10 @@ export class HalfFormgroupDirective {
   }
 
   constructor() {
-      this._elementClass.push('col-md-6');
-      this._elementClass.push('gutter-fix');
+      this._elementClass.push('row');
+
+      
   }
+
 
 }

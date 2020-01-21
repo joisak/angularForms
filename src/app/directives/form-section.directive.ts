@@ -1,9 +1,9 @@
 import { Directive, Input, HostBinding } from '@angular/core';
 
 @Directive({
-  selector: '[formSectionRow]'
+  selector: '[sectionContent]'
 })
-export class FormSectionRowDirective {
+export class FormSectionDirective {
 
   protected _elementClass: string[] = [];
 
@@ -18,10 +18,6 @@ export class FormSectionRowDirective {
   }
 
   constructor() {
-      this._elementClass.push('row');
-
-      
+      this._elementClass.push('form-section');
   }
-
-
 }

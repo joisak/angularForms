@@ -1,0 +1,27 @@
+<h1 topHeader>Kundupplägg - adressändring</h1>
+<ui-form>
+  <div row>
+    <div halfSection>
+      <h4>Avsändare</h4>
+      <div sectionContent>
+          <div inputWrapper>
+              <div input>
+                <ui-radio-button label="Välj din favorit" name="favvodjur"
+                [items]="[{label: 'Katt', name: 'favvodjur'}, {label: 'Hund', name: 'favvodjur'}]"></ui-radio-button>
+              </div>
+              <div input>
+                <ui-text-input  type="number" required="true"
+                errorMessage="Detta fältet är obligatoriskt" label="Cool Number" name="Cool number">
+              </ui-text-input>
+              </div>
+              <div input>
+                <ui-text-input name="email" label="Email" type="email"></ui-text-input>
+              </div>
+              <div input>
+                <ui-text-input name="Pohne" label="Telefonnummer" type="number"></ui-text-input>
+              </div>
+          </div>
+      </div>
+  </div>
+  </div>
+</ui-form>
