@@ -11,7 +11,7 @@ export class ApprovalOfRecruitmentCollectiveComponent implements OnInit {
 
   ngOnInit() {
   }
-  formName = 'Godkännande av rekrytering/inhyrning';
+  formName = 'Godkännande av rekrytering/inhyrning - Kollektivanställda';
 
   onSubmit(x) {
     let keys = Object.keys(x.form.value);
