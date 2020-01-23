@@ -1,0 +1,18 @@
+
+@import './../../../assets/scss/helpers.scss';
+.root {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: calc(100vh - #{rem(296)});
+    div {
+        padding-bottom: rem(80);
+    }
+    p {
+        a {
+        display: flex;
+        align-items: center;
+        font-size: 20px;
+        }
+    }
+}

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { CommonService } from '../../../../common.service';
 
 @Component({
   selector: 'app-hiring-replacement-salary-application',
@@ -6,11 +7,19 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./hiring-replacement-salary-application.component.scss']
 })
 export class HiringReplacementSalaryApplicationComponent implements OnInit {
+  serv: CommonService;
+  newServ;
 
-  constructor() { }
+  constructor(private commonService: CommonService) { 
+   
+  }
+
 
   ngOnInit() {
+
   }
+
+  
 
   formName = ' White Collar Hiring/Replacement/Salary';
 

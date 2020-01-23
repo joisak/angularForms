@@ -22,22 +22,23 @@ import { FormSectionRowDirective } from './directives/form-section-row.directive
 import { InputSectionDirective } from './directives/input-section.directive';
 import { TopHeaderDirective } from './directives/top-header.directive';
 import { StartComponent } from './pages/start/start.component';
-import { CustomerChangeAddressComponent } from './pages/forms/customer-change-address/customer-change-address.component';
-import { CustomerSetUpChangeComponent } from './pages/forms/customer-set-up-change/customer-set-up-change.component';
-import { CustomerSetUpCIELComponent } from './pages/forms/customer-set-up-ciel/customer-set-up-ciel.component';
-import { CustomerSetUpCIELAddressCustomerComponent } from './pages/forms/customer-set-up-cieladdress-customer/customer-set-up-cieladdress-customer.component';
-import { CustomerSetUpCIELChangeComponent } from './pages/forms/customer-set-up-cielchange/customer-set-up-cielchange.component';
-import { CustomerSetUpCompanyInternalSchenkerComponent } from './pages/forms/customer-set-up-company-internal-schenker/customer-set-up-company-internal-schenker.component';
-import { CustomerSetUpEmailPDFInvoiceComponent } from './pages/forms/customer-set-up-email-pdfinvoice/customer-set-up-email-pdfinvoice.component';
-import { CustomerSetUpExternalForeignCustomerComponent } from './pages/forms/customer-set-up-external-foreign-customer/customer-set-up-external-foreign-customer.component';
-import { CustomerSetUpExternalSwedishCustomerComponent } from './pages/forms/customer-set-up-external-swedish-customer/customer-set-up-external-swedish-customer.component';
-import { CustomerSetUpGlobusComponent } from './pages/forms/customer-set-up-globus/customer-set-up-globus.component';
-import { CustomerSetUpPalletCustomerComponent } from './pages/forms/customer-set-up-pallet-customer/customer-set-up-pallet-customer.component';
-import { CustomerSetUpSchenkerCompaniesComponent } from './pages/forms/customer-set-up-schenker-companies/customer-set-up-schenker-companies.component';
+import { CustomerChangeAddressComponent } from './pages/forms/customer/customer-change-address/customer-change-address.component';
+import { CustomerSetUpChangeComponent } from './pages/forms/customer/customer-set-up-change/customer-set-up-change.component';
+import { CustomerSetUpCIELComponent } from './pages/forms/customer/customer-set-up-ciel/customer-set-up-ciel.component';
+import { CustomerSetUpCIELAddressCustomerComponent } from './pages/forms/customer/customer-set-up-cieladdress-customer/customer-set-up-cieladdress-customer.component';
+import { CustomerSetUpCIELChangeComponent } from './pages/forms/customer/customer-set-up-cielchange/customer-set-up-cielchange.component';
+import { CustomerSetUpCompanyInternalSchenkerComponent } from './pages/forms/customer/customer-set-up-company-internal-schenker/customer-set-up-company-internal-schenker.component';
+import { CustomerSetUpEmailPDFInvoiceComponent } from './pages/forms/customer/customer-set-up-email-pdfinvoice/customer-set-up-email-pdfinvoice.component';
+import { CustomerSetUpExternalForeignCustomerComponent } from './pages/forms/customer/customer-set-up-external-foreign-customer/customer-set-up-external-foreign-customer.component';
+import { CustomerSetUpExternalSwedishCustomerComponent } from './pages/forms/customer/customer-set-up-external-swedish-customer/customer-set-up-external-swedish-customer.component';
+import { CustomerSetUpGlobusComponent } from './pages/forms/customer/customer-set-up-globus/customer-set-up-globus.component';
+import { CustomerSetUpPalletCustomerComponent } from './pages/forms/customer/customer-set-up-pallet-customer/customer-set-up-pallet-customer.component';
+import { CustomerSetUpSchenkerCompaniesComponent } from './pages/forms/customer/customer-set-up-schenker-companies/customer-set-up-schenker-companies.component';
 import { ExtendCreditComponent } from './pages/forms/other/extend-credit/extend-credit.component';
-import { HiringReplacementSalaryApplicationComponent } from './pages/forms/hiring-replacement-salary-application/hiring-replacement-salary-application.component';
-import { ApprovalOfRecruitmentComponent } from './pages/forms/approval-of-recruitment/approval-of-recruitment.component';
-import { ApprovalOfRecruitmentCollectiveComponent } from './pages/forms/approval-of-recruitment-collective/approval-of-recruitment-collective.component';
+import { HiringReplacementSalaryApplicationComponent } from './pages/forms/staff/hiring-replacement-salary-application/hiring-replacement-salary-application.component';
+import { ApprovalOfRecruitmentComponent } from './pages/forms/staff/approval-of-recruitment/approval-of-recruitment.component';
+import { ApprovalOfRecruitmentCollectiveComponent } from './pages/forms/staff/approval-of-recruitment-collective/approval-of-recruitment-collective.component';
+import { PageNotFoundComponent } from './pages/page-not-found/page-not-found.component';
 
 
 const appRoutes = [
@@ -99,7 +100,7 @@ const appRoutes = [
     path: 'cool', component: CoolFormComponent
   },
   {
-    path: '**', component: StartComponent 
+    path: '**', component: PageNotFoundComponent 
   }
 ];
 
@@ -133,6 +134,7 @@ const appRoutes = [
     HiringReplacementSalaryApplicationComponent,
     ApprovalOfRecruitmentComponent,
     ApprovalOfRecruitmentCollectiveComponent,
+    PageNotFoundComponent,
     
   ],
   imports: [
@@ -155,8 +157,6 @@ const appRoutes = [
     CheckboxModule,
     SelectModule,
     TestInputModule
-    
-    
   ],
   providers: [CommonService],
   bootstrap: [AppComponent]
