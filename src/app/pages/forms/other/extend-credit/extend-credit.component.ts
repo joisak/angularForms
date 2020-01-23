@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { CommonService } from 'src/app/common.service';
 
 @Component({
   selector: 'app-extend-credit',
@@ -7,18 +8,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ExtendCreditComponent implements OnInit {
 
-  constructor() { }
+  constructor(private commonService: CommonService) { }
 
   ngOnInit() {
     this.test();
   }
 
-  formName = 'Kundupplägg - Förlängd kredit under 30 dagar';
+  formName = 'Extend Credit Limit Ver 2';
 
-  onSubmit(x) {
-    let keys = Object.keys(x.form.value);
-    console.log(x.form.value);
-    console.log('Length: ', keys);
+  onSubmit(data) {
+    let form = data.form.value;
+    console.log(form);
+    this.commonService.postForm(form);
   }
 
   districts = ['Borås', 'Borlänge', 'Gävle', 'Göteborg', 'Halmstad', 'Helsingborg', 'Hudiksvall', 'Hultsfred', 'Jönköping', 'Karlshamn', 'Karlstad', 'Kristianstad', 'Linköping', 'Luleå', 'Malmö', 'Nybro', 'Örebro', 'Örnsköldsvik', 'Östersund', 'Skara', 'Skellefteå', 'Stockholm', 'Strömsund', 'Sundsvall', 'Umeå', 'Vänersborg', 'Värnamo', 'Västerås', 'Växjö', 'Visby', 'Air &amp; Ocean', 'Fairs &amp; Exhibitions', 'Rail', 'KAM kunder', 'MAM kunder'];

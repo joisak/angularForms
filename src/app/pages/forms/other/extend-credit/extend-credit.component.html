@@ -1,7 +1,7 @@
 
         <h1 class="display-4 first-header">Förlängd kredit under 30 dagar</h1>
         <form ngNativeValidate (ngSubmit)="onSubmit(form)" #form="ngForm">
-            <input type="hidden" [(ngModel)]="formName" name="myForm.FormName" />
+            <input type="hidden" [(ngModel)]="formName" name="FormName" />
             <div class="row no-gutters">
                 <div class="col-md-6 gutter-fix">
                     <h4>Avsändare</h4>
@@ -9,20 +9,20 @@
                         <div class="row">
                             <div class="form-group col-md-6">
                                 <label>Förnamn<span title="Denna fråga är obligatorisk" class="custom-required">&nbsp;*</span></label>
-                                <input class="form-control" [ngModel] name="myForm.FirstName" type="text" value="" required />
+                                <input class="form-control" [ngModel] name="FirstName" type="text" value="" required />
                             </div>
 
                             <div class="form-group col-md-6">
                                 <label class="normal">Efternamn</label>
-                                <input class="form-control " [ngModel] name="myForm.LastName" type="text" value="" required />
+                                <input class="form-control " [ngModel] name="LastName" type="text" value="" required />
                             </div>
                             <div class="form-group col-md-6">
                                 <label class="normal">Telefon</label>
-                                <input class="form-control " [ngModel] name="myForm.Telephone" title="" type="tel" value="" required />
+                                <input class="form-control " [ngModel] name="Telephone" title="" type="tel" value="" required />
                             </div>
                             <div class="frorm-group col-md-6">
                                 <label class="normal">E-post<span title="Denna fråga är obligatorisk" class="custom-required">&nbsp;*</span></label>
-                                <input class="form-control " [ngModel] name="myForm.Email" type="email" value="" required />
+                                <input class="form-control " [ngModel] name="Email" type="email" value="" required />
                             </div>
                         </div>
                     </div>
@@ -33,7 +33,7 @@
                         <div class="row">
                             <div class="form-group col-md-12">
                                 <label>Välj distrikt<span title="Denna fråga är obligatorisk" class="custom-required">&nbsp;*</span></label>
-                                <select class="form-control" [ngModel] name="myForm.District" required>
+                                <select class="form-control" [ngModel] name="District" required>
                                     <option value="" disabled selected>Distrikt</option>
                                     <option *ngFor="let district of districts">{{ district }}</option>
                                 </select>
@@ -50,49 +50,49 @@
                         <div class="row">
                             <div class="form-group col-md-3">
                                 <label>VAT / ORG-nummer <span title="Denna fråga är obligatorisk" class="custom-required">&nbsp;*</span></label>
-                                <input class="form-control" [ngModel] name="myForm.VATOrgNumber" type="text" value="" required />
+                                <input class="form-control" [ngModel] name="VATOrgNumber" type="text" value="" required />
                             </div>
                             <div class="form-group col-md-3">
                                 <label id="customerNumberExternalCredit" class="normal">Kundnummer <span title="Denna fråga är obligatorisk" class="custom-required">&nbsp;*</span></label>
-                                <input class="form-control" [ngModel] name="myForm.CustomerNumber"  type="text" value="" required />
+                                <input class="form-control" [ngModel] name="CustomerNumber"  type="text" value="" required />
                             </div>
                             <div class="form-group col-md-3">
                                 <label>Client ID</label><br />
-                                <input class="form-control" [ngModel] name="myForm.ClientId" type="text" value="" />
+                                <input class="form-control" [ngModel] name="ClientId" type="text" value="" />
                             </div>
                             <div class="form-group col-md-3">
                                 <label >Kundnamn <span title="Denna fråga är obligatorisk" class="custom-required">&nbsp;*</span></label>
-                                <input class="form-control" [ngModel] name="myForm.CustomerName" type="text" value="" required />
+                                <input class="form-control" [ngModel] name="CustomerName" type="text" value="" required />
                             </div>
                             <div class="form-group col-md-6">
                                 <label>Kunden är: </label>
-                                <select class="form-control" [ngModel] name="myForm.CustomerIs" value="">
+                                <select class="form-control" [ngModel] name="CustomerIs" value="">
                                     <option value="" disabled selected>Välj Alternativ</option>
                                     <option *ngFor="let customerIs of customerIsValues" [value]="customerIs">{{ customerIs }}</option>
                                 </select>
                             </div>
                             <div class="form-group col-md-6">
                                 <label id="customerResponibleCredit">Kundansvarig<span title="Denna fråga är obligatorisk" class="custom-required">&nbsp;*</span></label>
-                                <input class="form-control" [ngModel] name="myForm.CustomerResponsible" type="text" value="" required />
+                                <input class="form-control" [ngModel] name="CustomerResponsible" type="text" value="" required />
                             </div>
                             <div class="form-group col-md-3">
                                 <label>Fakturering 12 mån(TSEK)<span title="Denna fråga är obligatorisk" class="custom-required">&nbsp;*</span></label>
-                                <input class="form-control" [ngModel] name="myForm.ExistingInvoicing12Months" type="number" value="" required />
+                                <input class="form-control" [ngModel] name="ExistingInvoicing12Months" type="number" value="" required />
                             </div>
                             <div class="form-group col-md-3">
                                 <label>Fakturering föregående år(TSEK)</label>
-                                <input class="form-control" [ngModel] name="myForm.InvoicingPreviousYear" type="number" value="" />
+                                <input class="form-control" [ngModel] name="InvoicingPreviousYear" type="number" value="" />
                             </div>
                             <div class="form-group col-md-3">
                                 <label>Rating <span title="Denna fråga är obligatorisk" class="custom-required">&nbsp;*</span></label>
-                                <select class="form-control" [ngModel] name="myForm.Rating" value="" required>
+                                <select class="form-control" [ngModel] name="Rating" value="" required>
                                     <option value="" disabled selected>Välj Alternativ</option>
                                     <option *ngFor="let rating of ratings" [value]="rating">{{ rating }}</option>
                                 </select>
                             </div>
                             <div class="form-group col-md-3">
                                 <label>Paydex</label><br />
-                                <input class="form-control" [ngModel] name="myForm.PayDex" type="number" value="" />
+                                <input class="form-control" [ngModel] name="PayDex" type="number" value="" />
                             </div>
                         </div>
                     </div>
@@ -108,12 +108,12 @@
                                 <div>
                                     <label class="checkbox-container">
                                         Compass
-                                        <input type="checkbox" [ngModel] name="myForm.System.Compass" ng-true-value="'Compass'" value="Compass">
+                                        <input type="checkbox" [ngModel] name="System.Compass" ng-true-value="'Compass'" value="Compass">
                                         <span class="checkbox-checkmark"></span>
                                     </label>
                                     <label class="checkbox-container">
                                         Agency Business
-                                        <input type="checkbox" [ngModel] name="myForm.System.AgencyBusiness" ng-true-value="'Agency Business'" value="Agency Business">
+                                        <input type="checkbox" [ngModel] name="System.AgencyBusiness" ng-true-value="'Agency Business'" value="Agency Business">
                                         <span class="checkbox-checkmark"></span>
                                     </label>
                                 </div>
@@ -123,34 +123,34 @@
                                 <div>
                                     <label class="radio-container">
                                         Ja
-                                        <input type="radio" checked="checked"  value="Ja" [ngModel] name="myForm.Kreditavgift">
+                                        <input type="radio" checked="checked"  value="Ja" [ngModel] name="Kreditavgift">
                                         <span class="checkmark"></span>
                                     </label>
                                     <label class="radio-container">
                                         Nej
-                                        <input type="radio"  value="Nej" [ngModel] name="myForm.Kreditavgift">
+                                        <input type="radio"  value="Nej" [ngModel] name="Kreditavgift">
                                         <span class="checkmark"></span>
                                     </label>
                                 </div>
                             </div>
                             <div class="form-group col-md-3">
                                 <label>Befintligt Betalningsvillkor</label>
-                                <select class="form-control" [(ngModel)]="InrikesExisitingFrequenc" #ctrl="ngModel" name="myForm.InrikesExisitingFrequency" value="" (blur)="checkValue(InrikesExisitingFrequenc, 'DomesticPaymentCondition')">
+                                <select class="form-control" [(ngModel)]="InrikesExisitingFrequenc" #ctrl="ngModel" name="InrikesExisitingFrequency" value="" (blur)="checkValue(InrikesExisitingFrequenc, 'DomesticPaymentCondition')">
                                     <option value="" disabled selected>Frekvens</option>
                                     <option *ngFor="let frequence of frequences" [value]="frequence.frequence">{{ frequence.frequence }}</option>
                                 </select>
-                                <select class="form-control mt-2" [ngModel] name="myForm.InrikesExistingAntalDagar" type="number" value="">
+                                <select class="form-control mt-2" [ngModel] name="InrikesExistingAntalDagar" type="number" value="">
                                     <option value="" disabled selected>Antal dagar</option>
                                     <option *ngFor="let days of domesticDays" [value]="days">{{ days }}</option>
                                 </select>
                             </div>
                             <div class="form-group col-md-3">
                                 <label>Nytt betalningsvillkor</label>
-                                <select class="form-control" [(ngModel)]="InrikesDesiredFrequency" #ctrl="ngModel" name="myForm.InrikesDesiredFrequency"  (blur)="checkValue(InrikesDesiredFrequency, 'DomesticPaymentConditionNew')">
+                                <select class="form-control" [(ngModel)]="InrikesDesiredFrequency" #ctrl="ngModel" name="InrikesDesiredFrequency"  (blur)="checkValue(InrikesDesiredFrequency, 'DomesticPaymentConditionNew')">
                                     <option value="" disabled selected>Frekvens</option>
                                     <option *ngFor="let frequence of frequences" [value]="frequence.frequence">{{ frequence.frequence }}</option>
                                 </select>
-                                <select class="form-control mt-2" [ngModel] name="myForm.InrikesDesiredDays" type="number" value="">
+                                <select class="form-control mt-2" [ngModel] name="InrikesDesiredDays" type="number" value="">
                                     <option value="" disabled selected>Antal dagar</option>
                                     <option *ngFor="let days of domesticDesiredDays" [value]="days">{{ days }}</option>
                                 </select>
@@ -169,13 +169,13 @@
                                     <div>
                                         <label class="checkbox-container">
                                             Ciel
-                                            <input type="checkbox" [ngModel] name="myForm.UtrikesSystem.Ciel" ng-true-value="'Ciel'" [value]="Ciel" value="Ciel">
+                                            <input type="checkbox" [ngModel] name="UtrikesSystem.Ciel" ng-true-value="'Ciel'" [value]="Ciel" value="Ciel">
                                             <span class="checkbox-checkmark"></span>
                                         </label>
 
                                         <label class="checkbox-container">
                                             Rail
-                                            <input type="checkbox" [ngModel] name="myForm.UtrikesSystem.Rail" ng-true-value="'Rail'" [value]="Rail" value="Rail">
+                                            <input type="checkbox" [ngModel] name="UtrikesSystem.Rail" ng-true-value="'Rail'" [value]="Rail" value="Rail">
                                             <span class="checkbox-checkmark"></span>
                                         </label>
                                     </div>
@@ -185,34 +185,34 @@
                                     <div>
                                         <label class="radio-container">
                                             Ja
-                                            <input type="radio" checked="checked" value="Ja" [ngModel] name="myForm.UtrikesKorrigeringPris">
+                                            <input type="radio" checked="checked" value="Ja" [ngModel] name="UtrikesKorrigeringPris">
                                             <span class="checkmark"></span>
                                         </label>
                                         <label class="radio-container">
                                             Nej
-                                            <input type="radio" value="Nej" [ngModel] name="myForm.UtrikesKorrigeringPris">
+                                            <input type="radio" value="Nej" [ngModel] name="UtrikesKorrigeringPris">
                                             <span class="checkmark"></span>
                                         </label>
                                     </div>
                                 </div>
                                 <div class="form-group col-md-3">
                                     <label>Befintligt Betalningsvillkor</label>
-                                    <select class="form-control" [(ngModel)]="UtrikesExistingFrequency" #ctrl="ngModel" name="myForm.UtrikesExistingFrequency" (blur)="checkValue(UtrikesExistingFrequency, 'ForeignPaymentCondition')">
+                                    <select class="form-control" [(ngModel)]="UtrikesExistingFrequency" #ctrl="ngModel" name="UtrikesExistingFrequency" (blur)="checkValue(UtrikesExistingFrequency, 'ForeignPaymentCondition')">
                                         <option value="" disabled selected>Frekvens</option>
                                         <option *ngFor="let frequence of frequences" [value]="frequence.frequence">{{ frequence.frequence }}</option>
                                     </select>
-                                    <select class="form-control mt-2" [ngModel] name="myForm.UtrikesExistingDays" type="number" value="">
+                                    <select class="form-control mt-2" [ngModel] name="UtrikesExistingDays" type="number" value="">
                                         <option value="" disabled selected>Antal dagar</option>
                                         <option *ngFor="let days of foreignDays" [value]="days">{{ days }}</option>
                                     </select>
                                 </div>
                                 <div class="form-group col-md-3">
                                     <label>Nytt betalningsvillkor</label>
-                                    <select class="form-control" [(ngModel)]="UtrikesDesiredFrequency" #ctrl="ngModel" name="myForm.UtrikesExistingFrequency"  (blur)="checkValue(UtrikesDesiredFrequency, 'ForeignPaymentConditionNew')">
+                                    <select class="form-control" [(ngModel)]="UtrikesDesiredFrequency" #ctrl="ngModel" name="UtrikesExistingFrequency"  (blur)="checkValue(UtrikesDesiredFrequency, 'ForeignPaymentConditionNew')">
                                         <option value="" disabled selected>Frekvens</option>
                                         <option *ngFor="let frequence of frequences" [value]="frequence.frequence">{{ frequence.frequence }}</option>
                                     </select>
-                                    <select class="form-control mt-2" [ngModel] name="myForm.UtrikesDesiredDays" type="number" value="">
+                                    <select class="form-control mt-2" [ngModel] name="UtrikesDesiredDays" type="number" value="">
                                         <option value="" disabled selected>Antal dagar</option>
                                         <option *ngFor="let days of foreignDesiredDays" [value]="days">{{ days }}</option>
                                     </select>
@@ -231,13 +231,13 @@
                                     <div>
                                         <label class="checkbox-container">
                                             Import
-                                            <input type="checkbox" [ngModel] name="myForm.AirImportExport.Import" ng-true-value="'Import'">
+                                            <input type="checkbox" [ngModel] name="AirImportExport.Import" ng-true-value="'Import'">
                                             <span class="checkbox-checkmark"></span>
                                         </label>
 
                                         <label class="checkbox-container">
                                             Export
-                                            <input type="checkbox"  [ngModel] name="myForm.AirImportExport.Export" ng-true-value="'Export'" >
+                                            <input type="checkbox"  [ngModel] name="AirImportExport.Export" ng-true-value="'Export'" >
                                             <span class="checkbox-checkmark"></span>
                                         </label>
                                     </div>
@@ -247,34 +247,34 @@
                                     <div>
                                         <label class="radio-container">
                                             Ja
-                                            <input type="radio" checked="checked"  value="Ja" [ngModel] name="myForm.AirKreditavgift">
+                                            <input type="radio" checked="checked"  value="Ja" [ngModel] name="AirKreditavgift">
                                             <span class="checkmark"></span>
                                         </label>
                                         <label class="radio-container">
                                             Nej
-                                            <input type="radio"  value="Nej" [ngModel] name="myForm.AirKreditavgift">
+                                            <input type="radio"  value="Nej" [ngModel] name="AirKreditavgift">
                                             <span class="checkmark"></span>
                                         </label>
                                     </div>
                                 </div>
                                 <div class="form-group col-md-3">
                                     <label>Befintligt Betalningsvillkor</label>
-                                    <select class="form-control"  [(ngModel)]="AirExistingFrequency" #ctrl="ngModel"  name="myForm.AirExistingFrequency" (blur)="checkValue(AirExistingFrequency, 'AirPaymentCondition')">
+                                    <select class="form-control"  [(ngModel)]="AirExistingFrequency" #ctrl="ngModel"  name="AirExistingFrequency" (blur)="checkValue(AirExistingFrequency, 'AirPaymentCondition')">
                                         <option value="" disabled selected>Frekvens</option>
                                         <option *ngFor="let frequence of frequences" [value]="frequence.frequence">{{ frequence.frequence }}</option>
                                     </select>
-                                    <select class="form-control mt-2" [ngModel] name="myForm.AirExistingDays" type="number" value="">
+                                    <select class="form-control mt-2" [ngModel] name="AirExistingDays" type="number" value="">
                                         <option value="" disabled selected>Antal dagar</option>
                                         <option *ngFor="let days of airDays" [value]="days">{{ days }}</option>
                                     </select>
                                 </div>
                                 <div class="form-group col-md-3">
                                     <label>Nytt betalningsvillkor</label>
-                                    <select class="form-control"  [(ngModel)]="AirDesiredFrequency" #ctrl="ngModel"  name="myForm.AirDesiredFrequency" (blur)="checkValue(AirDesiredFrequency, 'AirPaymentConditionNew')">
+                                    <select class="form-control"  [(ngModel)]="AirDesiredFrequency" #ctrl="ngModel"  name="AirDesiredFrequency" (blur)="checkValue(AirDesiredFrequency, 'AirPaymentConditionNew')">
                                         <option value="" disabled selected>Frekvens</option>
                                         <option *ngFor="let frequence of frequences" [value]="frequence.frequence">{{ frequence.frequence }}</option>
                                     </select>
-                                    <select class="form-control mt-2" [ngModel] name="myForm.AirDesiredDays" type="number" value="">
+                                    <select class="form-control mt-2" [ngModel] name="AirDesiredDays" type="number" value="">
                                         <option value="" disabled selected>Antal dagar</option>
                                         <option *ngFor="let days of airDesiredDays" [value]="days">{{ days }}</option>
                                     </select>
@@ -294,13 +294,13 @@
                                     <div>
                                         <label class="checkbox-container">
                                             Import
-                                            <input type="checkbox" [ngModel] name="myForm.OceanImportExport.Import" ng-true-value="'Import'">
+                                            <input type="checkbox" [ngModel] name="OceanImportExport.Import" ng-true-value="'Import'">
                                             <span class="checkbox-checkmark"></span>
                                         </label>
 
                                         <label class="checkbox-container">
                                             Export
-                                            <input type="checkbox" [ngModel] name="myForm.OceanImportExport.Export" ng-true-value="'Export'">
+                                            <input type="checkbox" [ngModel] name="OceanImportExport.Export" ng-true-value="'Export'">
                                             <span class="checkbox-checkmark"></span>
                                         </label>
 
@@ -311,34 +311,34 @@
                                     <div>
                                         <label class="radio-container">
                                             Ja
-                                            <input type="radio" checked="checked"  value="Ja" [ngModel] name="myForm.OceanKreditavgift">
+                                            <input type="radio" checked="checked"  value="Ja" [ngModel] name="OceanKreditavgift">
                                             <span class="checkmark"></span>
                                         </label>
                                         <label class="radio-container">
                                             Nej
-                                            <input type="radio" value="Nej" [ngModel] name="myForm.OceanKreditavgift">
+                                            <input type="radio" value="Nej" [ngModel] name="OceanKreditavgift">
                                             <span class="checkmark"></span>
                                         </label>
                                     </div>
                                 </div>
                                 <div class="form-group col-md-3">
                                     <label>Befintligt Betalningsvillkor</label>
-                                    <select class="form-control"  [(ngModel)]="OceanExistingFrequency" #ctrl="ngModel"  name="myForm.OceanExistingFrequency" (blur)="checkValue(OceanExistingFrequency, 'OceanPaymentCondition')" >
+                                    <select class="form-control"  [(ngModel)]="OceanExistingFrequency" #ctrl="ngModel"  name="OceanExistingFrequency" (blur)="checkValue(OceanExistingFrequency, 'OceanPaymentCondition')" >
                                         <option value="" disabled selected>Frekvens</option>
                                         <option *ngFor="let frequence of frequences" [value]="frequence.frequence">{{ frequence.frequence }}</option>
                                     </select>
-                                    <select class="form-control mt-2" [ngModel] name="myForm.OceanExistingDays" type="number" value="">
+                                    <select class="form-control mt-2" [ngModel] name="OceanExistingDays" type="number" value="">
                                         <option value="" disabled selected>Antal dagar</option>
                                         <option *ngFor="let days of oceanDays" [value]="days">{{ days }}</option>
                                     </select>
                                 </div>
                                 <div class="form-group col-md-3">
                                     <label>Nytt betalningsvillkor</label>
-                                    <select class="form-control"  [(ngModel)]="OceanDesiredFrequency" #ctrl="ngModel"  name="myForm.OceanDesiredFrequency" (blur)="checkValue(OceanDesiredFrequency, 'OceanPaymentConditionNew')">
+                                    <select class="form-control"  [(ngModel)]="OceanDesiredFrequency" #ctrl="ngModel"  name="OceanDesiredFrequency" (blur)="checkValue(OceanDesiredFrequency, 'OceanPaymentConditionNew')">
                                         <option value="" disabled selected>Frekvens</option>
                                         <option *ngFor="let frequence of frequences" [value]="frequence.frequence">{{ frequence.frequence }}</option>
                                     </select>
-                                    <select class="form-control mt-2" [ngModel] name="myForm.OceanDesiredDays" type="number" value="">
+                                    <select class="form-control mt-2" [ngModel] name="OceanDesiredDays" type="number" value="">
                                         <option value="" disabled selected>Antal dagar</option>
                                         <option *ngFor="let days of oceanDesiredDays" [value]="days">{{ days }}</option>
                                     </select>
@@ -360,7 +360,7 @@
                                     <div>
                                         <label class="checkbox-container">
                                             Globus
-                                            <input type="checkbox" [ngModel] name="myForm.FandASystem.Globus" ng-true-value="'Globus'">
+                                            <input type="checkbox" [ngModel] name="FandASystem.Globus" ng-true-value="'Globus'">
                                             <span class="checkbox-checkmark"></span>
                                         </label>
                                     </div>
@@ -370,12 +370,12 @@
                                     <div>
                                         <label class="radio-container">
                                             Ja
-                                            <input type="radio" checked="checked"  value="Ja" [ngModel] name="myForm.FandAKreditavgift">
+                                            <input type="radio" checked="checked"  value="Ja" [ngModel] name="FandAKreditavgift">
                                             <span class="checkmark"></span>
                                         </label>
                                         <label class="radio-container">
                                             Nej
-                                            <input type="radio"  value="Nej" [ngModel] name="myForm.FandAKreditavgift">
+                                            <input type="radio"  value="Nej" [ngModel] name="FandAKreditavgift">
                                             <span class="checkmark"></span>
                                         </label>
                                     </div>
@@ -383,11 +383,11 @@
 
                                 <div class="form-group col-md-3">
                                     <label>Befintligt Betalningsvillkor</label>
-                                    <select class="form-control"  [(ngModel)]="FandAExistingFrequency" #ctrl="ngModel"  name="myForm.FandAExistingFrequency" (blur)="checkValue(FandAExistingFrequency, 'FandEPaymentCondition')">
+                                    <select class="form-control"  [(ngModel)]="FandAExistingFrequency" #ctrl="ngModel"  name="FandAExistingFrequency" (blur)="checkValue(FandAExistingFrequency, 'FandEPaymentCondition')">
                                         <option value="" disabled selected>Frekvens</option>
                                         <option *ngFor="let frequence of frequences" [value]="frequence.frequence">{{ frequence.frequence }}</option>
                                     </select>
-                                    <select class="form-control mt-2" [ngModel] name="myForm.FandAExistingDays" type="number" value="">
+                                    <select class="form-control mt-2" [ngModel] name="FandAExistingDays" type="number" value="">
                                         <option value="" disabled selected>Antal dagar</option>
                                         <option *ngFor="let days of fairsAndExhibitionDays" [value]="days">{{ days }}</option>
                                     </select>
@@ -395,11 +395,11 @@
 
                                 <div class="form-group col-md-3">
                                     <label>Nytt betalningsvillkor</label>
-                                    <select class="form-control"  [(ngModel)]="FandADesiredFrequency" #ctrl="ngModel"  name="myForm.FandADesiredFrequency" (blur)="checkValue(FandADesiredFrequency, 'FandEPaymentConditionNew')">
+                                    <select class="form-control"  [(ngModel)]="FandADesiredFrequency" #ctrl="ngModel"  name="FandADesiredFrequency" (blur)="checkValue(FandADesiredFrequency, 'FandEPaymentConditionNew')">
                                         <option value="" disabled selected>Frekvens</option>
                                         <option *ngFor="let frequence of frequences" [value]="frequence.frequence">{{ frequence.frequence }}</option>
                                     </select>
-                                    <select class="form-control mt-2" [ngModel] name="myForm.FandADesiredDays" type="number" value="">
+                                    <select class="form-control mt-2" [ngModel] name="FandADesiredDays" type="number" value="">
                                         <option value="" disabled selected>Antal dagar</option>
                                         <option *ngFor="let days of fairsAndExhibitionDesiredDays" [value]="days">{{ days }}</option>
                                     </select>
@@ -418,7 +418,7 @@
                                 <div class="form-group col-md-12">
                                     <label>Skriv en motivering till varför kunden ska godkännas för förlängd kredit.<span title="Denna fråga är obligatorisk" class="custom-required">&nbsp;*</span></label>
                       
-                                    <textarea class="form-control" [ngModel] name="myForm.Motivering" type="text" value="" required></textarea>
+                                    <textarea class="form-control" [ngModel] name="Motivering" type="text" value="" required></textarea>
                                 </div>
                             </div>
                         </div>

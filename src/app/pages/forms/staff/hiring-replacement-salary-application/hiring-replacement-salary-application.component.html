@@ -7,7 +7,7 @@
     </div>
 
     <form ngNativeValidate (ngSubmit)="onSubmit(form)" #form="ngForm">
-        <input type="hidden" [(ngModel)]="formName"  name="myForm.FormName" />
+        <input type="hidden" [(ngModel)]="formName"  name="FormName" />
         <div class="row">
             
             <div class="col-md-12">
@@ -22,45 +22,45 @@
                             <div>
                                 <label class="radio-container">
                                     New Hire
-                                    <input type="radio" checked="checked" value="New Hire"  [ngModel] name="myForm.RequestType">
+                                    <input type="radio" checked="checked" value="New Hire"  [ngModel] name="RequestType">
                                     <span class="checkmark"></span>
                                 </label>
                                 <label class="radio-container">
                                     Replacement
-                                    <input type="radio" value="Replacement"  [ngModel] name="myForm.RequestType">
+                                    <input type="radio" value="Replacement"  [ngModel] name="RequestType">
                                     <span class="checkmark"></span>
                                 </label>
                                 <label class="radio-container">
                                     Salary Increase
-                                    <input type="radio" value="SalaryIncrease"  [ngModel] name="myForm.RequestType">
+                                    <input type="radio" value="SalaryIncrease"  [ngModel] name="RequestType">
                                     <span class="checkmark"></span>
                                 </label>
                             </div>
                         </div>
                         <div class="form-group col-md-3">
                             <label>Business Unit </label>
-                            <input class="form-control"  [ngModel] name="myForm.Unit" type="text" value="" />
+                            <input class="form-control"  [ngModel] name="Unit" type="text" value="" />
                         </div>
                         <div class="form-group col-md-3">
                             <label class="normal">Work location </label>
-                            <input class="form-control"  [ngModel] name="myForm.WorkLocation" type="text" value="" />
+                            <input class="form-control"  [ngModel] name="WorkLocation" type="text" value="" />
                         </div>
                         <div class="form-group col-md-3">
                             <label>Cost will be taken by BU/Country</label><br />
-                            <input class="form-control"  [ngModel] name="myForm.CostCenter" type="text" value="" />
+                            <input class="form-control"  [ngModel] name="CostCenter" type="text" value="" />
                         </div>
                         <div class="form-group col-md-3">
                             <label>Position </label>
-                            <input class="form-control"  [ngModel] name="myForm.Position" type="text" value="" />
+                            <input class="form-control"  [ngModel] name="Position" type="text" value="" />
                         </div>
 
                         <div class="form-group col-md-3">
                             <label>Name of current position holder</label>
-                            <input class="form-control"  [ngModel] name="myForm.NameOfCurrentPositionHolder" type="text" value="" required />
+                            <input class="form-control"  [ngModel] name="NameOfCurrentPositionHolder" type="text" value="" required />
                         </div>
                         <div class="form-group col-md-3">
                             <label>Name of candidate (if applicable)</label>
-                            <input class="form-control"  [ngModel] name="myForm.CandidatesName" type="number" value="" required />
+                            <input class="form-control"  [ngModel] name="CandidatesName" type="number" value="" required />
                         </div>
                     </div>
                 </div>
@@ -76,10 +76,10 @@
                             <label>Yearly salary between: </label>
                             <div class="row">
                                 <div class="col-md-6">
-                                    <input class="form-control" placeholder="From"  [ngModel] name="myForm.YearlySalaryHireReplacementFrom" type="number" value="" />
+                                    <input class="form-control" placeholder="From"  [ngModel] name="YearlySalaryHireReplacementFrom" type="number" value="" />
                                 </div>
                                 <div class="col-md-6">
-                                    <input class="form-control" placeholder="To"  [ngModel] name="myForm.YearlySalaryHireReplacementTo" type="number" value="" />
+                                    <input class="form-control" placeholder="To"  [ngModel] name="YearlySalaryHireReplacementTo" type="number" value="" />
                                 </div>
                             </div>
                         </div>
@@ -88,31 +88,31 @@
                             <div>
                                 <label class="radio-container">
                                     Yes
-                                    <input type="radio" checked="checked" value="Yes"  [ngModel] name="myForm.BonusApproved">
+                                    <input type="radio" checked="checked" value="Yes"  [ngModel] name="BonusApproved">
                                     <span class="checkmark"></span>
                                 </label>
                                 <label class="radio-container">
                                     No
-                                    <input type="radio" value="No"  [ngModel] name="myForm.BonusApproved">
+                                    <input type="radio" value="No"  [ngModel] name="BonusApproved">
                                     <span class="checkmark"></span>
                                 </label>
                             </div>
                         </div>
                         <div class="form-group col-md-2">
                             <label>Bonus amount</label><br />
-                            <input class="form-control"  [ngModel] name="myForm.BonusAmount" type="number" value="" />
+                            <input class="form-control"  [ngModel] name="BonusAmount" type="number" value="" />
                         </div>
                         <div class="form-group col-md-4">
                             <label class="block-label">Company Car</label>
                             <div>
                                 <label class="radio-container">
                                     Yes
-                                    <input type="radio" checked="checked" value="Yes"  [ngModel] name="myForm.CompanyCar">
+                                    <input type="radio" checked="checked" value="Yes"  [ngModel] name="CompanyCar">
                                     <span class="checkmark"></span>
                                 </label>
                                 <label class="radio-container">
                                     No
-                                    <input type="radio" value="No"  [ngModel] name="myForm.CompanyCar">
+                                    <input type="radio" value="No"  [ngModel] name="CompanyCar">
                                     <span class="checkmark"></span>
                                 </label>
                             </div>
@@ -131,13 +131,13 @@
                             <label>Yearly Current Salary in local currency</label>
                             <div class="row">
                                 <div class="col-md-4">
-                                    <input class="form-control" placeholder="Fix"  [ngModel] name="myForm.YearlySalaryIncreaseCurrentFix" type="number" value="" />
+                                    <input class="form-control" placeholder="Fix"  [ngModel] name="YearlySalaryIncreaseCurrentFix" type="number" value="" />
                                 </div>
                                 <div class="col-md-4">
-                                    <input class="form-control" placeholder="Target Bouns"  [ngModel] name="myForm.YearlySalaryIncreaseCurrentTargetBonus" type="number" value="" />
+                                    <input class="form-control" placeholder="Target Bouns"  [ngModel] name="YearlySalaryIncreaseCurrentTargetBonus" type="number" value="" />
                                 </div>
                                 <div class="col-md-4">
-                                    <input class="form-control" placeholder="Total Bonus"  [ngModel] name="myForm.YearlySalaryIncreaseCurrentTotalTargetBonus" type="number" value="" />
+                                    <input class="form-control" placeholder="Total Bonus"  [ngModel] name="YearlySalaryIncreaseCurrentTotalTargetBonus" type="number" value="" />
                                 </div>
                             </div>
 
@@ -146,13 +146,13 @@
                             <label>Proposed New Salary in local currency</label>
                             <div class="row">
                                 <div class="col-md-4">
-                                    <input class="form-control" placeholder="Fix"  [ngModel] name="myForm.YearlySalaryIncreaseNewFix" type="number" value="" />
+                                    <input class="form-control" placeholder="Fix"  [ngModel] name="YearlySalaryIncreaseNewFix" type="number" value="" />
                                 </div>
                                 <div class="col-md-4">
-                                    <input class="form-control" placeholder="Target Bonus"  [ngModel] name="myForm.YearlySalaryIncreaseNewTargetBonus" type="number" value="" />
+                                    <input class="form-control" placeholder="Target Bonus"  [ngModel] name="YearlySalaryIncreaseNewTargetBonus" type="number" value="" />
                                 </div>
                                 <div class="col-md-4">
-                                    <input class="form-control" placeholder="Total Bonus"  [ngModel] name="myForm.YearlySalaryIncreaseNewTotalTargetBonus" type="number" value="" />
+                                    <input class="form-control" placeholder="Total Bonus"  [ngModel] name="YearlySalaryIncreaseNewTotalTargetBonus" type="number" value="" />
                                 </div>
                             </div>
                         </div>
@@ -170,7 +170,7 @@
                             <label>
                                 Written motivation for recruitment<span title="Denna fråga är obligatorisk" class="custom-required">&nbsp;*</span>
                             </label>
-                            <textarea class="form-control"  [ngModel] name="myForm.Justification" type="text" value="" required></textarea>
+                            <textarea class="form-control"  [ngModel] name="Justification" type="text" value="" required></textarea>
                         </div>
                     </div>
                 </div>

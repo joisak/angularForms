@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { CommonService } from 'src/app/common.service';
 
 @Component({
   selector: 'app-customer-set-up-external-foreign-customer',
@@ -7,16 +8,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CustomerSetUpExternalForeignCustomerComponent implements OnInit {
 
-  constructor() { }
+  constructor(private commonService: CommonService) { }
 
   ngOnInit() {
   }
 
   
-  formName = 'Kundupplägg - extern svensk kund';
+  formName = 'Nyupplägg Extern Utländsk Kund';
 
-  onSubmit(x) {
-    console.log(x.form.value);
+  onSubmit(data) {
+    let form = data.form.value;
+    console.log(form);
+    this.commonService.postForm(form);
   }
 
 }

@@ -20,5 +20,4 @@ export class CustomerSetUpGlobusComponent implements OnInit {
     this.commonService.postForm(form);
   }
 
-
 }

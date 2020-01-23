@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { CommonService } from 'src/app/common.service';
 
 @Component({
   selector: 'app-customer-set-up-pallet-customer',
@@ -7,16 +8,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CustomerSetUpPalletCustomerComponent implements OnInit {
 
-  constructor() { }
+  constructor(private commonService: CommonService) { }
 
   ngOnInit() {
   }
 
-  formName = 'Kundupplägg - pallkund';
+  formName = 'Ny pallkund';
 
-  onSubmit(x) {
-    let keys = Object.keys(x.form.value);
-    console.log(x.form.value);
-    console.log('Length: ', keys);
+  onSubmit(data) {
+    let form = data.form.value;
+    console.log(form);
+    this.commonService.postForm(form);
   }
 }

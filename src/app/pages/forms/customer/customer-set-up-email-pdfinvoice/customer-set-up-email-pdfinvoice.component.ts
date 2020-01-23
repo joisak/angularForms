@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { CommonService } from 'src/app/common.service';
 
 @Component({
   selector: 'app-customer-set-up-email-pdfinvoice',
@@ -7,17 +8,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CustomerSetUpEmailPDFInvoiceComponent implements OnInit {
 
-  constructor() { }
+  constructor(private commonService : CommonService) { }
 
   ngOnInit() {
   }
 
-  formName = 'Kundupplägg - mail PDF-faktura';
+  formName = 'Ändring eller nyupplägg av PDF';
 
-  onSubmit(x) {
-    console.log(x.form.value);
+  onSubmit(data) {
+    let form = data.form.value;
+    this.commonService.postForm(form);
   }
-
-
 
 }

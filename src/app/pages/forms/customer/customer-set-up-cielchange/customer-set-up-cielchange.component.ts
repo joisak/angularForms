@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { CommonService } from 'src/app/common.service';
 
 @Component({
   selector: 'app-customer-set-up-cielchange',
@@ -7,17 +8,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CustomerSetUpCIELChangeComponent implements OnInit {
 
-  constructor() { }
+  constructor(private commonService: CommonService) { }
 
   ngOnInit() {
   }
 
-
-  formName = 'Kundupplägg - CIEL ändring';
+  formName = 'Ändring i Ciel';
 
   onSubmit(x) {
-    console.log(x.form.value);
+    let form = x.form.value;
+    console.log(form);
+    this.commonService.postForm(form);
   }
-
 
 }

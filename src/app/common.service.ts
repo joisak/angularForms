@@ -22,7 +22,7 @@ export class CommonService {
       textString += `<b>${key}</b><br/>\n`;
       textString += `${value}<br/><br/>\n\n`;
 
-      if (value === null) {
+      if (value === null || value === undefined) {
         keyValue.push({
           key: key,
           value: ''
@@ -42,6 +42,9 @@ export class CommonService {
       "HtmlFormData": textString,
       "KeyedData": keyValue
     }
+
+    console.log(dataToSend);
+
     return this.http.post(this.apiUrl, dataToSend).subscribe(
       results => {
         console.log('Success');

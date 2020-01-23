@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { CommonService } from 'src/app/common.service';
 
 @Component({
   selector: 'app-approval-of-recruitment',
@@ -7,17 +8,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ApprovalOfRecruitmentComponent implements OnInit {
 
-  constructor() { }
+  constructor(private commonService: CommonService) { }
 
   ngOnInit() {
   }
 
   formName = 'Godkännande av rekrytering/inhyrning';
 
-  onSubmit(x) {
-    let keys = Object.keys(x.form.value);
-    console.log(x.form.value);
-    console.log('Length: ', keys);
+  onSubmit(data) {
+    let form = data.form.value;
+    console.log(form);
+    this.commonService.postForm(form);
   }
 
 

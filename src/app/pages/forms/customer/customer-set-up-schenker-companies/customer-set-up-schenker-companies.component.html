@@ -1,7 +1,7 @@
 <h1 class="display-4 first-header">Kundupplägg - övriga Schenkerbolag</h1>
 
         <form ngNativeValidate (ngSubmit)="onSubmit(form)" #form="ngForm">
-            <input type="hidden" [(ngModel)]="formName" name="myForm.FormName" />
+            <input type="hidden" [(ngModel)]="formName" name="FormName" />
 
             <div class="row no-gutters">
                 <div class="col-md-6 gutter-fix">
@@ -10,20 +10,20 @@
                         <div class="row">
                             <div class="form-group col-md-6">
                                 <label>Förnamn<span title="Denna fråga är obligatorisk" class="custom-required">&nbsp;*</span></label>
-                                <input class="form-control" [ngModel]  name="myForm.FirstName" type="text" value="" required />
+                                <input class="form-control" [ngModel]  name="FirstName" type="text" value="" required />
                             </div>
 
                             <div class="form-group col-md-6">
                                 <label class="normal">Efternamn</label>
-                                <input class="form-control " [ngModel]  name="myForm.LastName" type="text" value="" required />
+                                <input class="form-control " [ngModel]  name="LastName" type="text" value="" required />
                             </div>
                             <div class="form-group col-md-6">
                                 <label class="normal">Telefon</label>
-                                <input class="form-control " [ngModel]  name="myForm.Telephone" title="" type="tel" value="" required />
+                                <input class="form-control " [ngModel]  name="Telephone" title="" type="tel" value="" required />
                             </div>
                             <div class="frorm-group col-md-6">
                                 <label class="normal">E-post<span title="Denna fråga är obligatorisk" class="custom-required">&nbsp;*</span></label>
-                                <input class="form-control " [ngModel]  name="myForm.Email" type="email" value="" required />
+                                <input class="form-control " [ngModel]  name="Email" type="email" value="" required />
                             </div>
                         </div>
                     </div>
@@ -34,15 +34,15 @@
                         <div class="row">
                             <div class="form-group col-md-6">
                                 <label>Schenkerbolag<span title="Denna fråga är obligatorisk" class="custom-required">&nbsp;*</span></label>
-                                <input class="form-control" [ngModel]  name="myForm.SchenkerCompany" type="number" value="" required />
+                                <input class="form-control" [ngModel]  name="SchenkerCompany" type="number" value="" required />
                             </div>
                             <div class="form-group col-md-6">
                                 <label>VAT/Organisationsnummer<span title="Denna fråga är obligatorisk" class="custom-required">&nbsp;*</span></label>
-                                <input class="form-control" [ngModel]  name="myForm.OrginasationNumber" type="number" value="" required />
+                                <input class="form-control" [ngModel]  name="OrginasationNumber" type="number" value="" required />
                             </div>
                             <div class="form-group col-md-6">
                                 <label>Företagsnamn <span title="Denna fråga är obligatorisk" class="custom-required">&nbsp;*</span></label>
-                                <input class="form-control" [ngModel]  name="myForm.CompanyName" type="text" value="" required />
+                                <input class="form-control" [ngModel]  name="CompanyName" type="text" value="" required />
                             </div>
                         </div>
                     </div>
@@ -57,21 +57,21 @@
                         <div class="row">
                             <div class="form-group col-md-3">
                                 <label>Gatuadress</label>
-                                <input class="form-control" [ngModel]  name="myForm.StreetAddress" type="text" value="" />
+                                <input class="form-control" [ngModel]  name="StreetAddress" type="text" value="" />
                             </div>
                             <div class="form-group col-md-3">
 
                                 <label class="normal">Postnummer</label>
-                                <input class="form-control" [ngModel]  name="myForm.PostalCode" type="text" value="" />
+                                <input class="form-control" [ngModel]  name="PostalCode" type="text" value="" />
                             </div>
 
                             <div class="form-group col-md-3">
                                 <label>Ort</label><br />
-                                <input class="form-control" [ngModel]  name="myForm.City" type="text" value="" />
+                                <input class="form-control" [ngModel]  name="City" type="text" value="" />
                             </div>
                             <div class="form-group col-md-3">
                                 <label>Land</label><br />
-                                <input class="form-control" [ngModel]  name="myForm.Country" type="text" value="" />
+                                <input class="form-control" [ngModel]  name="Country" type="text" value="" />
                             </div>
                         </div>
                     </div>
@@ -85,21 +85,21 @@
                         <div class="row">
                             <div class="form-group col-md-3">
                                 <label>Fakturaadress</label>
-                                <input class="form-control" [ngModel]  name="myForm.BillingAddress" type="text" value="" />
+                                <input class="form-control" [ngModel]  name="BillingAddress" type="text" value="" />
                             </div>
 
                             <div class="form-group col-md-3">
                                 <label>Postnummer</label><br />
-                                <input class="form-control" [ngModel]  name="myForm.BillingPostalCode" type="number" value="" />
+                                <input class="form-control" [ngModel]  name="BillingPostalCode" type="number" value="" />
                             </div>
 
                             <div class="form-group col-md-3">
                                 <label>Ort</label><br />
-                                <input class="form-control" [ngModel]  name="myForm.CityBilling" type="text" value="" />
+                                <input class="form-control" [ngModel]  name="CityBilling" type="text" value="" />
                             </div>
                             <div class="form-group col-md-3">
                                 <label>Land</label><br />
-                                <input class="form-control" [ngModel]  name="myForm.CountryBilling" type="text" value="" />
+                                <input class="form-control" [ngModel]  name="CountryBilling" type="text" value="" />
                             </div>
                         </div>
                     </div>
@@ -114,17 +114,17 @@
 
                             <div class="form-group col-md-3">
                                 <label>Avdelning (C/O)</label>
-                                <input class="form-control" [ngModel]  name="myForm.Department" type="text" value="" />
+                                <input class="form-control" [ngModel]  name="Department" type="text" value="" />
                             </div>
 
                             <div class="form-group col-md-3">
                                 <label>Kontonotis</label>
-                                <input class="form-control" [ngModel]  name="myForm.AccountNote" type="text" value="" />
+                                <input class="form-control" [ngModel]  name="AccountNote" type="text" value="" />
                             </div>
 
                             <div class="form-group col-md-3">
                                 <label>Övrigt</label>
-                                <textarea class="form-control" [ngModel]  name="myForm.Other" maxlength="4000" title="" type="text" value=""></textarea>
+                                <textarea class="form-control" [ngModel]  name="Other" maxlength="4000" title="" type="text" value=""></textarea>
                             </div>
                         </div>
                     </div>

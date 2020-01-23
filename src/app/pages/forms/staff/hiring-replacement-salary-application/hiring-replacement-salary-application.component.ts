@@ -14,18 +14,16 @@ export class HiringReplacementSalaryApplicationComponent implements OnInit {
    
   }
 
-
   ngOnInit() {
 
   }
 
-  
-
   formName = ' White Collar Hiring/Replacement/Salary';
 
-  onSubmit(x) {
-    let keys = Object.keys(x.form.value);
-    console.log(x.form.value);
-    console.log('Length: ', keys);
+  onSubmit(data) {
+    let form = data.form.value;
+    console.log(form);
+    this.commonService.postForm(form);
   }
+
 }

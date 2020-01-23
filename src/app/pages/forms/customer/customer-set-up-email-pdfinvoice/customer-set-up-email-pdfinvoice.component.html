@@ -2,7 +2,7 @@
         <h1 class="display-4 first-header">Kundupplägg - mail PDF-faktura</h1>
 
         <form ngNativeValidate (ngSubmit)="onSubmit(form)" #form="ngForm">
-            <input type="hidden" [(ngModel)]="formName" name="myForm.FormName" />
+            <input type="hidden" [(ngModel)]="formName" name="FormName" />
             <div class="row no-gutters">
                 <div class="col-md-6 gutter-fix">
                     <h4>Avsändare</h4>
@@ -10,20 +10,20 @@
                         <div class="row">
                             <div class="form-group col-md-6">
                                 <label>Förnamn<span title="Denna fråga är obligatorisk" class="custom-required">&nbsp;*</span></label>
-                                <input class="form-control"   [ngModel] name="myForm.FirstName" type="text" value="" required />
+                                <input class="form-control"   [ngModel] name="FirstName" type="text" value="" required />
                             </div>
 
                             <div class="form-group col-md-6">
                                 <label class="normal">Efternamn</label>
-                                <input class="form-control "   [ngModel] name="myForm.LastName" type="text" value="" required />
+                                <input class="form-control "   [ngModel] name="LastName" type="text" value="" required />
                             </div>
                             <div class="form-group col-md-6">
                                 <label class="normal">Telefon</label>
-                                <input class="form-control "   [ngModel] name="myForm.Telephone" title="" type="tel" value="" required />
+                                <input class="form-control "   [ngModel] name="Telephone" title="" type="tel" value="" required />
                             </div>
                             <div class="frorm-group col-md-6">
                                 <label class="normal">E-post<span title="Denna fråga är obligatorisk" class="custom-required">&nbsp;*</span></label>
-                                <input class="form-control "   [ngModel] name="myForm.Email" type="email" value="" required />
+                                <input class="form-control "   [ngModel] name="Email" type="email" value="" required />
                             </div>
                         </div>
                     </div>
@@ -34,11 +34,11 @@
                         <div class="row">
                             <div class="form-group col-md-6">
                                 <label>VAT/Organisationsnummer<span title="Denna fråga är obligatorisk" class="custom-required">&nbsp;*</span></label>
-                                <input class="form-control"   [ngModel] name="myForm.VATOrgNumber" type="number" value="" required />
+                                <input class="form-control"   [ngModel] name="VATOrgNumber" type="number" value="" required />
                             </div>
                             <div class="form-group col-md-6">
                                 <label>Kundnummer</label>
-                                <input class="form-control"   [ngModel] name="myForm.CustomerNumber" type="text" value=""  />
+                                <input class="form-control"   [ngModel] name="CustomerNumber" type="text" value=""  />
                             </div>
                         </div>
                     </div>
@@ -53,7 +53,7 @@
                         <div class="row">
                             <div class="form-group col-md-6">
                                 <label>PDF adress <span title="Denna fråga är obligatorisk" class="custom-required">&nbsp;*</span></label>
-                                <input class="form-control"   [ngModel] name="myForm.PDFAddress" type="text" value="" required />
+                                <input class="form-control"   [ngModel] name="PDFAddress" type="text" value="" required />
                             </div>
 
                             <div class="form-group col-md-6">
@@ -61,12 +61,12 @@
                                 <div>
                                     <label class="radio-container">
                                         Ja
-                                        <input required type="radio" checked="checked" value="Ja"   [ngModel] name="myForm.WholeOrganisation">
+                                        <input required type="radio" checked="checked" value="Ja"   [ngModel] name="WholeOrganisation">
                                         <span class="checkmark"></span>
                                     </label>
                                     <label class="radio-container">
                                         Nej
-                                        <input required type="radio"  value="Nej"   [ngModel] name="myForm.WholeOrganisation">
+                                        <input required type="radio"  value="Nej"   [ngModel] name="WholeOrganisation">
                                         <span class="checkmark"></span>
                                     </label>
                                 </div>
@@ -74,7 +74,7 @@
 
                             <div class="form-group col-md-6">
                                 <label>Övrigt</label>
-                                <textarea class="form-control"   [ngModel] name="myForm.Other" maxlength="4000" title="" type="text" value=""></textarea>
+                                <textarea class="form-control"   [ngModel] name="Other" maxlength="4000" title="" type="text" value=""></textarea>
                             </div>
                         </div>
                     </div>

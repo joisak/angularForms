@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { CommonService } from 'src/app/common.service';
 
 @Component({
   selector: 'app-customer-set-up-company-internal-schenker',
@@ -7,16 +8,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CustomerSetUpCompanyInternalSchenkerComponent implements OnInit {
 
-  constructor() { }
+  constructor(private commonService: CommonService) { }
 
   ngOnInit() {
   }
 
-  formName = 'Kundupplägg - bolagsinterna Schenker AB';
+  formName = 'Nyupplägg Bolagsinterna Schenker AB';
 
-  onSubmit(x) {
-    console.log(x.form.value);
+  onSubmit(data) {
+    let form = data.form.value;
+    console.log(form);
+    this.commonService.postForm(form);
   }
-
 
 }
