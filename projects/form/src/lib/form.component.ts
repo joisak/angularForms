@@ -37,8 +37,6 @@ export class FormComponent implements OnInit {
     this.setValue(textarea);
     this.setValue(select);
 
-    console.log('FORM DATA --->', this.formData);
-
     this.commonService.postForm(this.formData);
   }
 

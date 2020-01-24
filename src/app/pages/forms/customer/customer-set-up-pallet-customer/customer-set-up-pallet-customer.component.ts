@@ -17,7 +17,6 @@ export class CustomerSetUpPalletCustomerComponent implements OnInit {
 
   onSubmit(data) {
     let form = data.form.value;
-    console.log(form);
     this.commonService.postForm(form);
   }
 }

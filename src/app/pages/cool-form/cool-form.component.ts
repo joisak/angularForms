@@ -9,8 +9,6 @@ export class CoolFormComponent implements OnInit {
 
   constructor() { }
 
-
-
   submit(x, y) {
     console.log(x, y );
   }

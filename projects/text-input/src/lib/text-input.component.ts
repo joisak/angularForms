@@ -70,7 +70,6 @@ export class TextInputComponent implements AfterContentInit {
   } */
 
   focusOutFunction(value) {
-    console.log(value);
     if (this.errorMessage && !value.length) {
       this.error = true;
     } else {
@@ -79,8 +78,7 @@ export class TextInputComponent implements AfterContentInit {
   }
 
   showValue(value) {
-    console.log("A change!", value);
-    console.log("test", this.eventValue);
+
   }
 
   ngAfterContentInit() {}

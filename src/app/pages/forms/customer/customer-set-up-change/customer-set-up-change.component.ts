@@ -17,7 +17,6 @@ export class CustomerSetUpChangeComponent implements OnInit {
 
   onSubmit(x) {
     let form = x.form.value;
-    console.log(form);
     this.commonService.postForm(form);
   }
 }

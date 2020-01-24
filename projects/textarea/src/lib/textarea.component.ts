@@ -60,7 +60,6 @@ export class TextareaComponent implements OnInit, AfterContentInit {
   @Output() eventValue = new EventEmitter();
 
   focusOutFunction(value) {
-    console.log(value);
     if (this.errorMessage && !value.length) {
       this.error = true;
     } else {

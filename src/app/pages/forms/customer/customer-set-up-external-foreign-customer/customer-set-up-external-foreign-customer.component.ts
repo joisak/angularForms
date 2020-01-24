@@ -18,7 +18,6 @@ export class CustomerSetUpExternalForeignCustomerComponent implements OnInit {
 
   onSubmit(data) {
     let form = data.form.value;
-    console.log(form);
     this.commonService.postForm(form);
   }
 

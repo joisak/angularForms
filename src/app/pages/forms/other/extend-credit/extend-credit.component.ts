@@ -18,7 +18,6 @@ export class ExtendCreditComponent implements OnInit {
 
   onSubmit(data) {
     let form = data.form.value;
-    console.log(form);
     this.commonService.postForm(form);
   }
 
@@ -34,7 +33,6 @@ export class ExtendCreditComponent implements OnInit {
 
   
   test1() {
-    console.log('Hej');
   }
 
   test() {

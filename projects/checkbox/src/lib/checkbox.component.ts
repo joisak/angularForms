@@ -35,7 +35,6 @@ export class CheckboxComponent implements OnInit {
     this.val = val;
     this.onChange(val);
     this.onTouch(val);
-    console.log(this.val);
   }
 
   onTouchedCallback: () => {};
@@ -44,17 +43,14 @@ export class CheckboxComponent implements OnInit {
 
   // this method sets the value programmatically
   writeValue(value: any) {
-    console.log(value);
     this.value = value;
   }
   // upon UI element value changes, this method gets triggered
   registerOnChange(fn: any) {
-    console.log("register 1", this.value);
     this.onChange = fn;
   }
   // upon touching the element, this method gets triggered
   registerOnTouched(fn: any) {
-    console.log("register 2", this.value);
     this.onTouch = fn;
   }
 

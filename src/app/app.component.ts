@@ -2,10 +2,6 @@ import { Component, OnInit, AfterViewInit } from '@angular/core';
 import { HttpClient,  } from '@angular/common/http';
 
 
-export function submitForm(x) {
-  console.log(x.form.value);
-}
-
 
 @Component({
   selector: 'app-root',

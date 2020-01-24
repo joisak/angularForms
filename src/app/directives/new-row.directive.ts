@@ -18,7 +18,7 @@ export class NewRowDirective {
 
   constructor() {
       this._elementClass.push('row');
-      this._elementClass.push('no-gutters');
+
   }
 
 

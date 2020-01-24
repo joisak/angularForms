@@ -11,7 +11,6 @@ import { DatepickerModule } from 'projects/datepicker/src/public-api';
 import { RadioButtonModule } from 'projects/radio-button/src/public-api';
 import { CheckboxModule } from 'projects/checkbox/src/public-api';
 import { SelectModule } from 'projects/select/src/public-api';
-import { FormExampleComponent } from './pages/form-example/form-example.component';
 import { CommonService } from './common.service';
 import { CoolFormComponent } from './pages/cool-form/cool-form.component';
 import { HalfFormgroupDirective } from './directives/half-formgroup.directive';
@@ -93,9 +92,6 @@ const appRoutes = [
     path: 'external-credit', component: ExtendCreditComponent
   }, 
   { 
-    path: 'example', component: FormExampleComponent
-  },
-  { 
     path: 'cool', component: CoolFormComponent
   },
   {
@@ -108,7 +104,6 @@ const appRoutes = [
 @NgModule({
   declarations: [
     AppComponent,
-    FormExampleComponent,
     CoolFormComponent,
     HalfFormgroupDirective,
     NewRowDirective,
