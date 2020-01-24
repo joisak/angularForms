@@ -37,6 +37,11 @@ import { HiringReplacementSalaryApplicationComponent } from './pages/forms/staff
 import { ApprovalOfRecruitmentComponent } from './pages/forms/staff/approval-of-recruitment/approval-of-recruitment.component';
 import { ApprovalOfRecruitmentCollectiveComponent } from './pages/forms/staff/approval-of-recruitment-collective/approval-of-recruitment-collective.component';
 import { PageNotFoundComponent } from './pages/page-not-found/page-not-found.component';
+import { InputFullDirective } from './directives/input-full.directive';
+import { FullSectionDirective } from './directives/full-section.directive';
+import { QuarterInputDirective } from './directives/quarter-input.directive';
+
+
 
 
 const appRoutes = [
@@ -129,7 +134,9 @@ const appRoutes = [
     ApprovalOfRecruitmentComponent,
     ApprovalOfRecruitmentCollectiveComponent,
     PageNotFoundComponent,
-    
+    InputFullDirective,
+    FullSectionDirective,
+    QuarterInputDirective,
   ],
   imports: [
     RouterModule.forRoot(

@@ -1,7 +1,7 @@
 import { Directive, Input, HostBinding } from '@angular/core';
 
 @Directive({
-  selector: '[input]'
+  selector: '[halfInput]'
 })
 export class InputSectionDirective {
 

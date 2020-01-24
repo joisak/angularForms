@@ -5,16 +5,16 @@
       <h4>Avsändare</h4>
       <div sectionContent>
         <div inputWrapper>
-          <div input>
+          <div halfInput>
             <ui-text-input required="true" label="Förnamn" name="FirstName"></ui-text-input>
           </div>
-          <div input>
+          <div halfInput>
             <ui-text-input required="true" label="Efternamn" name="LastName"></ui-text-input>
           </div>
-          <div input>
+          <div halfInput>
             <ui-text-input requred="true" name="Phone" label="Telefonnummer" type="number"></ui-text-input>
           </div>
-          <div input>
+          <div halfInput>
             <ui-text-input required="true" name="Email" label="Email" type="email"></ui-text-input>
           </div>
         </div>
@@ -25,10 +25,10 @@
       <h4>Kund</h4>
       <div sectionContent>
         <div inputWrapper>
-          <div input>
+          <div halfInput>
             <ui-text-input required="true" label="VAT/Orginisationsnummer" name="VATOrgNumber"></ui-text-input>
           </div>
-          <div input>
+          <div halfInput>
             <ui-text-input required="true" label="Kundnummer" name="CustomerNumber"></ui-text-input>
           </div>
         </div>
@@ -41,18 +41,15 @@
     <div halfSection>
       <div sectionContent>
         <div inputWrapper>
-          <div input>
+          <div halfInput>
             <ui-text-input required="true" label="PDF adress" name="PDFAdress"></ui-text-input>
           </div>
-          <div input>
-            <ui-radio-button [items]="[{label: 'Ja', id: '1', name: 'Orgnummer'}, {label: 'Nej', id:'2', name: 'Orgnummer'}]" required="true" label="Gäller ändringar hela Orginisationsnumret?"></ui-radio-button>
-
+          <div halfInput>
+            <ui-radio-button inputName="wow" [items]="[{label: 'Ja', name: 'Orgnummer'}, {label: 'Nej', name: 'Orgnummer'}]" required="true" label="Gäller ändringar hela Orginisationsnumret?"></ui-radio-button>
           </div>
-          <div input>
+          <div fullInput>
             <ui-textarea required="true" label="Övrigt" name="Other"></ui-textarea>
-
           </div>
-    
         </div>
       </div>
     </div>

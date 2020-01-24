@@ -41,6 +41,8 @@ export class CommonService {
       "KeyedData": keyValue
     }
 
+    console.log('DataToSend --> ', dataToSend);
+
     return this.http.post(this.apiUrl, dataToSend).subscribe(
       results => {
         console.log('Success', results);
