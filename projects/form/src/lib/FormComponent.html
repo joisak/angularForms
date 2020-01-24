@@ -1,4 +1,5 @@
 <form ngNativeValidate (ngSubmit)="submit()">
+    <input type="hidden"  name="FormName" [value]="formName" />
     <div>
         <ng-content></ng-content>
     </div>

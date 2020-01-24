@@ -1,27 +1,60 @@
-<h1 topHeader>Kundupplägg - adressändring</h1>
-<ui-form>
+<h1 topHeader>TEST</h1>
+<ui-form formName="Ändring eller nyupplägg av PDF">
   <div row>
     <div halfSection>
       <h4>Avsändare</h4>
       <div sectionContent>
-          <div inputWrapper>
-              <div input>
-                <ui-radio-button label="Välj din favorit" name="favvodjur"
-                [items]="[{label: 'Katt', name: 'favvodjur'}, {label: 'Hund', name: 'favvodjur'}]"></ui-radio-button>
-              </div>
-              <div input>
-                <ui-text-input  type="number" required="true"
-                errorMessage="Detta fältet är obligatoriskt" label="Cool Number" name="Cool number">
-              </ui-text-input>
-              </div>
-              <div input>
-                <ui-text-input name="email" label="Email" type="email"></ui-text-input>
-              </div>
-              <div input>
-                <ui-text-input name="Pohne" label="Telefonnummer" type="number"></ui-text-input>
-              </div>
+        <div inputWrapper>
+          <div input>
+            <ui-text-input required="true" label="Förnamn" name="FirstName"></ui-text-input>
           </div>
+          <div input>
+            <ui-text-input required="true" label="Efternamn" name="LastName"></ui-text-input>
+          </div>
+          <div input>
+            <ui-text-input requred="true" name="Phone" label="Telefonnummer" type="number"></ui-text-input>
+          </div>
+          <div input>
+            <ui-text-input required="true" name="Email" label="Email" type="email"></ui-text-input>
+          </div>
+        </div>
       </div>
+    </div>
+    
+    <div halfSection>
+      <h4>Kund</h4>
+      <div sectionContent>
+        <div inputWrapper>
+          <div input>
+            <ui-text-input required="true" label="VAT/Orginisationsnummer" name="VATOrgNumber"></ui-text-input>
+          </div>
+          <div input>
+            <ui-text-input required="true" label="Kundnummer" name="CustomerNumber"></ui-text-input>
+          </div>
+        </div>
+      </div>
+
+
+    </div>
   </div>
+  <div row>
+    <div halfSection>
+      <div sectionContent>
+        <div inputWrapper>
+          <div input>
+            <ui-text-input required="true" label="PDF adress" name="PDFAdress"></ui-text-input>
+          </div>
+          <div input>
+            <ui-radio-button [items]="[{label: 'Ja', id: '1', name: 'Orgnummer'}, {label: 'Nej', id:'2', name: 'Orgnummer'}]" required="true" label="Gäller ändringar hela Orginisationsnumret?"></ui-radio-button>
+
+          </div>
+          <div input>
+            <ui-textarea required="true" label="Övrigt" name="Other"></ui-textarea>
+
+          </div>
+    
+        </div>
+      </div>
+    </div>
   </div>
 </ui-form>

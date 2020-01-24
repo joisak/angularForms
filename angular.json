@@ -475,40 +475,6 @@
         }
       }
     },
-    "testInput": {
-      "projectType": "library",
-      "root": "projects/test-input",
-      "sourceRoot": "projects/test-input/src",
-      "prefix": "ui",
-      "architect": {
-        "build": {
-          "builder": "@angular-devkit/build-ng-packagr:build",
-          "options": {
-            "tsConfig": "projects/test-input/tsconfig.lib.json",
-            "project": "projects/test-input/ng-package.json"
-          }
-        },
-        "test": {
-          "builder": "@angular-devkit/build-angular:karma",
-          "options": {
-            "main": "projects/test-input/src/test.ts",
-            "tsConfig": "projects/test-input/tsconfig.spec.json",
-            "karmaConfig": "projects/test-input/karma.conf.js"
-          }
-        },
-        "lint": {
-          "builder": "@angular-devkit/build-angular:tslint",
-          "options": {
-            "tsConfig": [
-              "projects/test-input/tsconfig.lib.json",
-              "projects/test-input/tsconfig.spec.json"
-            ],
-            "exclude": [
-              "**/node_modules/**"
-            ]
-          }
-        }
-      }
-    }},
+
   "defaultProject": "formComponents"
 }

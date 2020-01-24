@@ -1,4 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { CommonService } from 'src/app/common.service';
 
 @Component({
   selector: 'ui-form',
@@ -8,9 +9,10 @@ import { Component, OnInit, Input } from '@angular/core';
 export class FormComponent implements OnInit {
 
   @Input() label: string;
+  @Input() formName: string;
   formData = {};
 
-  constructor() { }
+  constructor(private commonService: CommonService) { }
 
   setValue(input) {
     for (var i = 0; i < input.length; i++) {
@@ -37,6 +39,7 @@ export class FormComponent implements OnInit {
 
     console.log('FORM DATA --->', this.formData);
 
+    this.commonService.postForm(this.formData);
   }
 
   ngOnInit() {

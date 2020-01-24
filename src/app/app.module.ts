@@ -14,7 +14,6 @@ import { SelectModule } from 'projects/select/src/public-api';
 import { FormExampleComponent } from './pages/form-example/form-example.component';
 import { CommonService } from './common.service';
 import { CoolFormComponent } from './pages/cool-form/cool-form.component';
-import { TestInputComponent, TestInputModule } from 'projects/test-input/src/public-api';
 import { HalfFormgroupDirective } from './directives/half-formgroup.directive';
 import { NewRowDirective } from './directives/new-row.directive';
 import { FormSectionDirective } from './directives/form-section.directive';
@@ -156,7 +155,7 @@ const appRoutes = [
     RadioButtonModule,
     CheckboxModule,
     SelectModule,
-    TestInputModule
+    
   ],
   providers: [CommonService],
   bootstrap: [AppComponent]
