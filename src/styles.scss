@@ -15,11 +15,7 @@ $material-icons-font-path: '~material-icons/iconfont/';
 
 //From SchreqForms
 
-body {
-    /*TODO(joisak) why padding? */
-    /*padding-top: 50px;*/
-    /*padding-bottom: 20px;*/
-}
+
 
 a {
     color: #0a1e6ed9;
@@ -96,6 +92,23 @@ header {
 
 
 /*Form*/
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+  border: 1px solid rgb(184, 184, 184);
+  -webkit-text-fill-color: black;
+  -webkit-box-shadow: 0 0 0px 1000px rgb(255, 255, 255) inset;
+  transition: background-color 5000s ease-in-out 0s;
+}
+
+
 
 label {
     font-weight: 500;
@@ -319,3 +332,4 @@ textarea {
         -ms-transform: rotate(45deg);
         transform: rotate(45deg);
     }
+

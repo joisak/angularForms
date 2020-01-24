@@ -8,26 +8,24 @@ export class CommonService {
 
   constructor(private http: HttpClient) { }
 
-  onSubmit(x) {
-    console.log(x);
-    console.log('Values');
-    console.log('JUST SNYGGT --->, ', x.form.value);
-  }
-
   postForm(object: any) {
     let textString = '';
     let keyValue = [];
 
     for (const [key, value] of Object.entries(object)) {
-      textString += `<b>${key}</b><br/>\n`;
-      textString += `${value}<br/><br/>\n\n`;
+
 
       if (value === null || value === undefined) {
+        textString += `<b>${key}</b><br/>\n`;
+        textString += `------<br/><br/>\n\n`;
+
         keyValue.push({
           key: key,
           value: ''
         });
       } else {
+        textString += `<b>${key}</b><br/>\n`;
+        textString += `${value}<br/><br/>\n\n`;
         keyValue.push({
           key: key,
           value: value

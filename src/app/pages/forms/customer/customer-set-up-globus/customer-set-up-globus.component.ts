@@ -13,8 +13,8 @@ export class CustomerSetUpGlobusComponent implements OnInit {
   ngOnInit() {
   }
 
-  formName = 'Globus';
-
+  formName = 'Katt';
+ 
   onSubmit(x) {
     let form = x.form.value;
     this.commonService.postForm(form);
