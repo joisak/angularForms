@@ -18,7 +18,7 @@ export class InputSectionDirective {
   }
 
   constructor() {
-      this._elementClass.push('form-group');
+      //this._elementClass.push('form-group');
       this._elementClass.push('col-md-6');
   }
 

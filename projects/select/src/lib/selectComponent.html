@@ -1,4 +1,4 @@
- <div class="root">
+ <div class="root form-group">
     <label class="block-label" [for]="for">{{ label }}<span class="custom-required" *ngIf="required">*</span></label>
     <select [(ngModel)]="value" [name]="name" [attr.name]="name" [required]="required" [id]="for" [disabled]="disabled" *ngIf="items">
         <option *ngIf="placeholder" value="">{{ placeholder }}</option>

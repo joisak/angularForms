@@ -43,30 +43,15 @@ export class SelectComponent implements OnInit {
   _value:string = ''; 
   obj = {};
 
-  @Input() items: string[];
+  @Input() items: any[];
   @Input() disabled: boolean;
   @Input() placeholder: string;
   @Input() label: string;
-  @Input() for: string;
+  @Input() for: string = 'default';
   @Input() name: string;
   @Input() required: boolean;
 
   @Output() eventValue = new EventEmitter();
-
-
-  changeValue(name, event) {
-    if(event.target.required){
-      this.obj[name]= [this.value, 'required'];
-    } else {
-      this.obj[name] = this.value;
-    }
-   
-    this.eventValue.emit(this.obj);
-  }
-  
-  getSelected(selected: any) {
-    console.log('The Selected One is: ', selected);
-  }
 
   constructor() { }
 

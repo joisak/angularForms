@@ -12,7 +12,7 @@
             <ui-text-input required="true" label="Efternamn" name="LastName"></ui-text-input>
           </div>
           <div halfInput>
-            <ui-text-input requred="true" name="Phone" label="Telefonnummer" type="number"></ui-text-input>
+            <ui-text-input required="true" name="Phone" label="Telefonnummer" type="number"></ui-text-input>
           </div>
           <div halfInput>
             <ui-text-input required="true" name="Email" label="Email" type="email"></ui-text-input>
@@ -38,16 +38,25 @@
     </div>
   </div>
   <div row>
-    <div halfSection>
+    <div fullSection>
       <div sectionContent>
         <div inputWrapper>
           <div halfInput>
             <ui-text-input required="true" label="PDF adress" name="PDFAdress"></ui-text-input>
+            <ui-select name="favvoband" label="Välj finast namn" [items]="['Bowling with Friends', 'The Cool Sporty Boys', 'You']"></ui-select>
           </div>
           <div halfInput>
             <ui-radio-button inputName="wow" [items]="[{label: 'Ja', name: 'Orgnummer'}, {label: 'Nej', name: 'Orgnummer'}]" required="true" label="Gäller ändringar hela Orginisationsnumret?"></ui-radio-button>
+            <ui-radio-button inputName="wow" [items]="[{label: 'Kanske', name: 'Cool'}, {label: 'Ibland', name: 'Cool'}]" required="true" label="Gäller ändringar hela Orginisationsnumret?"></ui-radio-button>
+
           </div>
-          <div fullInput>
+          <div halfInput>
+            <ui-checkbox name="kamel" label="Välj dina favvodjur" checkboxLabel="Kamel"></ui-checkbox>
+            <ui-checkbox name="delfin" checkboxLabel="Delfin"></ui-checkbox>
+            <ui-checkbox name="giraff" checkboxLabel="Giraff"></ui-checkbox>
+            <ui-datepicker name="datum" label="Välj datum"></ui-datepicker>
+          </div>
+          <div halfInput>
             <ui-textarea required="true" label="Övrigt" name="Other"></ui-textarea>
           </div>
         </div>

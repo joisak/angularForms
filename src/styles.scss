@@ -75,6 +75,7 @@ footer {
 
 .custom-required {
     color: red;
+    padding-left: 3px;
 }
 
 .custom-info-icon {
@@ -148,6 +149,7 @@ textarea {
 
 .block-label {
     display: block;
+    word-break: break-all;
 }
 
 .no-gutters  .gutter-fix:first-of-type {
@@ -276,6 +278,7 @@ textarea {
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
+    margin-bottom: 20px;
 }
 
     /* Hide the browser's default checkbox */

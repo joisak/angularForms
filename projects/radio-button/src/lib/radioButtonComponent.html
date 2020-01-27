@@ -18,24 +18,25 @@
  -->
 
 
-
- <label class="block-label">
-  {{ label }}<span class="custom-required" *ngIf="required">*</span>
-</label>
-<label class="root radio-container" *ngFor="let item of items">
-  {{ item.label }}
-  <input
-    [(ngModel)]="value"
-    [required]="required"
-    [disabled]="disabled"
-    type="radio"
-    [id]="item.label"
-    [attr.name]="item.name"
-    [name]="item.name"
-    [value]="item.label"
-    [attr.value]="item.label"
-  />
-  <span class="checkmark"></span>
-</label>
+<div class="form-group">
+  <label class="block-label">
+    {{ label }}<span class="custom-required" *ngIf="required">*</span>
+  </label>
+  <label class="root radio-container" *ngFor="let item of items">
+    {{ item.label }}
+    <input
+      [(ngModel)]="value"
+      [required]="required"
+      [disabled]="disabled"
+      type="radio"
+      [id]="item.label"
+      [attr.name]="item.name"
+      [name]="item.name"
+      [value]="item.label"
+      [attr.value]="item.label"
+    />
+    <span class="checkmark"></span>
+  </label>
+</div>
 
  
