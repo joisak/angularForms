@@ -20,7 +20,7 @@
         </div>
       </div>
     </div>
-    
+
     <div halfSection>
       <h4>Kund</h4>
       <div sectionContent>
@@ -31,30 +31,42 @@
           <div halfInput>
             <ui-text-input required="true" label="Kundnummer" name="CustomerNumber"></ui-text-input>
           </div>
+          <div fullInput>
+            <ui-text-input name="personalCode" label="Personnummer"></ui-text-input>
+          </div>
         </div>
       </div>
-
-
     </div>
   </div>
+
   <div row>
     <div fullSection>
       <div sectionContent>
         <div inputWrapper>
           <div halfInput>
             <ui-text-input required="true" label="PDF adress" name="PDFAdress"></ui-text-input>
-            <ui-select name="favvoband" label="Välj finast namn" [items]="['Bowling with Friends', 'The Cool Sporty Boys', 'You']"></ui-select>
           </div>
           <div halfInput>
-            <ui-radio-button inputName="wow" [items]="[{label: 'Ja', name: 'Orgnummer'}, {label: 'Nej', name: 'Orgnummer'}]" required="true" label="Gäller ändringar hela Orginisationsnumret?"></ui-radio-button>
-            <ui-radio-button inputName="wow" [items]="[{label: 'Kanske', name: 'Cool'}, {label: 'Ibland', name: 'Cool'}]" required="true" label="Gäller ändringar hela Orginisationsnumret?"></ui-radio-button>
+            <ui-radio-button inputName="wow"
+              [items]="[{label: 'Ja', name: 'Orgnummer'}, {label: 'Nej', name: 'Orgnummer'}]" required="true"
+              label="Gäller ändringar hela Orginisationsnumret?"></ui-radio-button>
 
           </div>
-          <div halfInput>
+          <div quarterInput>
             <ui-checkbox name="kamel" label="Välj dina favvodjur" checkboxLabel="Kamel"></ui-checkbox>
             <ui-checkbox name="delfin" checkboxLabel="Delfin"></ui-checkbox>
             <ui-checkbox name="giraff" checkboxLabel="Giraff"></ui-checkbox>
-            <ui-datepicker name="datum" label="Välj datum"></ui-datepicker>
+          </div>
+          <div quarterInput>
+            <ui-text-input label="Ditt favorit smeknamn"></ui-text-input>
+          </div>
+          <div halfInput>
+            <ui-select name="favvoband" label="Välj ditt favoritband"
+              [items]="['Bowling with Friends', 'Bob Jylland', 'ABBA']"></ui-select>
+
+          </div>
+          <div halfInput>
+            <ui-datepicker required="true" name="datum" label="Välj datum"></ui-datepicker>
           </div>
           <div halfInput>
             <ui-textarea required="true" label="Övrigt" name="Other"></ui-textarea>
@@ -64,3 +76,22 @@
     </div>
   </div>
 </ui-form>
+
+<ui-text-input label="Text Input" name="textinput"></ui-text-input>
+<ui-text-input type="number" label="Number" name="numberinputs"></ui-text-input>
+<ui-text-input type="email" label="Email" name="emailInput"></ui-text-input>
+
+<ui-textarea  label="Textarea" name="textarea"></ui-textarea>
+<ui-datepicker name="dateInput" label="DateInput"></ui-datepicker>
+
+<ui-select  name="favvoband" label="Välj ditt favoritband"
+[items]="['Bowling with Friends', 'Bob Jylland', 'ABBA']"></ui-select>
+
+<ui-checkbox name="checkboxes" label="Checkboxes" checkboxLabel="Checkbox 1"></ui-checkbox>
+<ui-checkbox name="checkboxes_" checkboxLabel="Checkbox 2"></ui-checkbox>
+<ui-checkbox name="checkboxes__" checkboxLabel="Checkboxe 3"></ui-checkbox>
+
+<ui-radio-button inputName="wow"
+[items]="[{label: 'Ja', name: 'Radio'}, {label: 'Nej', name: 'Radio'}]" 
+label="Radiobuttons"></ui-radio-button>
+

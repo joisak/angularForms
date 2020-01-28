@@ -10,6 +10,7 @@ export class FormComponent implements OnInit {
 
   @Input() label: string;
   @Input() formName: string;
+  disabled = false;
   formData = {};
 
   constructor(private commonService: CommonService) { }
@@ -37,7 +38,15 @@ export class FormComponent implements OnInit {
     this.setValue(textarea);
     this.setValue(select);
 
-    this.commonService.postForm(this.formData);
+    this.commonService.postForm(this.formData).subscribe(
+      results => {
+        console.log('Success', results);
+        this.disabled = true;
+      },
+      error => {
+        console.log('Error: ', error);
+      }
+    )
   }
 
   ngOnInit() {

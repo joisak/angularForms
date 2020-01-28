@@ -43,14 +43,7 @@ export class CommonService {
 
     console.log('DataToSend --> ', dataToSend);
 
-    return this.http.post(this.apiUrl, dataToSend).subscribe(
-      results => {
-        console.log('Success', results);
-      },
-      error => {
-        console.log('Error: ', error);
-      }
-    )
+    return this.http.post(this.apiUrl, dataToSend);
   }
 
 }
